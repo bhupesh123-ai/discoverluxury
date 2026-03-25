@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCOVER LUXURY | Private Journeys</title>
+    
+    <!-- Frameworks -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#030303',
+                        bronze: '#B89564',
+                        ivory: '#E5E5E5',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #030303; color: #E5E5E5; overflow-x: hidden; }
+        .kerning-extra { letter-spacing: 0.4em; }
+        .kerning-title { letter-spacing: -0.02em; }
+        
+        /* High-End Smooth Scroll */
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+
+        /* Cinematic Masking */
+        .reveal-mask { clip-path: inset(0 100% 0 0); transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1); }
+        .reveal-mask.active { clip-path: inset(0 0 0 0); }
+
+        /* Minimal Inputs */
+        input, select {
+            background: transparent !important;
+            border: none !important;
+            border-bottom: 1px solid rgba(229, 229, 229, 0.2) !important;
+            padding: 1.5rem 0 !important;
+            font-weight: 200;
+            transition: border-color 0.5s ease;
+        }
+        input:focus { border-bottom-color: #B89564 !important; outline: none; }
+
+        .image-parallax { transform: scale(1.2); transition: transform 2s cubic-bezier(0, 0.55, 0.45, 1); }
+        
+        /* Custom Cursor */
+        .cursor-dot { width: 6px; height: 6px; background: #B89564; position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; }
+        .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(184, 149, 100, 0.3); position: fixed; border-radius: 50%; pointer-events: none; z-index: 9998; transition: transform 0.15s ease-out; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-bronze selection:text-white">
+
+    <div class="cursor-dot hidden lg:block"></div>
+    <div class="cursor-outline hidden lg:block"></div>
+
+    <!-- Minimal Nav -->
+    <nav class="fixed top-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference">
+        <a href="/" class="font-serif text-xl kerning-extra uppercase opacity-80 hover:opacity-100 transition-opacity">Discover Luxury</a>
+        <div class="flex items-center gap-12">
+            <a href="#inquiry" class="hidden md:block text-[10px] kerning-extra uppercase font-light border-b border-bronze/40 pb-1 hover:border-bronze transition-all">Begin a Conversation</a>
+            <div class="w-10 h-px bg-ivory/60"></div>
+        </div>
+    </nav>
+
+    <!-- Hero: Cinematic & Silent -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-40 scale-110" id="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-luxury-resort-with-a-pool-near-the-ocean-4064-large.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
+        
+        <div class="relative z-10 text-center px-4">
+            <span class="block text-[10px] kerning-extra uppercase mb-8 opacity-60 translate-y-10 reveal-item">EST. 2024</span>
+            <h1 class="font-serif text-6xl md:text-[10rem] italic leading-none kerning-title mb-12 opacity-0 translate-y-20 reveal-item">
+                The Unseen <br> <span class="md:ml-32">World</span>
+            </h1>
+            <div class="flex justify-center opacity-0 translate-y-10 reveal-item">
+                <a href="#experiences" class="group flex flex-col items-center gap-4">
+                    <span class="text-[9px] kerning-extra uppercase font-light">Explore the Collection</span>
+                    <div class="w-px h-20 bg-gradient-to-b from-bronze to-transparent"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Narrative Section: Spacing and Typography Focus -->
+    <section class="py-64 px-8 md:px-24 bg-obsidian">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+            <div class="reveal-mask">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000" alt="Detail" class="w-full h-[700px] object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+            </div>
+            <div class="space-y-12">
+                <h2 class="font-serif text-4xl md:text-6xl italic leading-tight">"Luxury is not a destination, but a state of absolute privacy."</h2>
+                <div class="w-20 h-px bg-bronze"></div>
+                <p class="text-ivory/50 font-light leading-loose max-w-md">
+                    We architect journeys for the few who have seen it all. Our role is to provide the invisible threads that connect rare access, absolute security, and profound cultural immersion.
+                </p>
+                <p class="text-[10px] kerning-extra uppercase text-bronze font-medium tracking-widest">Discoverluxury.in — Private Office</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Experiences: Asymmetric Grid -->
+    <section id="experiences" class="py-32 px-8">
+        <div class="container mx-auto">
+            <!-- Row 1 -->
+            <div class="flex flex-col md:flex-row gap-20 mb-40">
+                <div class="md:w-7/12 group overflow-hidden relative">
+                    <div class="overflow-hidden h-[600px]">
+                        <img src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?q=80&w=2000" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+                    </div>
+                    <div class="mt-8">
+                        <span class="text-[9px] kerning-extra text-bronze uppercase">Antarctica</span>
+                        <h3 class="font-serif text-3xl italic mt-2">The White Desert Fly-In</h3>
+                    </div>
+                </div>
+                <div class="md:w-4/12 md:mt-48 group">
+                    <div class="overflow-hidden h-[450px]">
+                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=2000" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+                    </div>
+                    <div class="mt-8">
+                        <span class="text-[9px] kerning-extra text-bronze uppercase">Africa</span>
+                        <h3 class="font-serif text-3xl italic mt-2">The Great Migration Private Camp</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="flex flex-col md:flex-row-reverse gap-20">
+                <div class="md:w-7/12 group overflow-hidden">
+                    <div class="overflow-hidden h-[600px]">
+                        <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?q=80&w=2000" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+                    </div>
+                    <div class="mt-8">
+                        <span class="text-[9px] kerning-extra text-bronze uppercase">Private Islands</span>
+                        <h3 class="font-serif text-3xl italic mt-2">North Island Sanctuary</h3>
+                    </div>
+                </div>
+                <div class="md:w-3/12 group">
+                    <p class="text-xs text-ivory/40 leading-loose mb-12 italic">Every experience is tailored by our global network of fixers, conservationists, and historians.</p>
+                    <div class="overflow-hidden h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2000" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curation Section: Editorial Layout -->
+    <section class="py-64 bg-white text-obsidian">
+        <div class="container mx-auto px-8 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+                <div>
+                    <span class="text-[9px] kerning-extra uppercase opacity-40 mb-10 block">The Founders Perspective</span>
+                    <h2 class="font-serif text-6xl italic leading-tight mb-12">Bhupesh's <br>A-List Curation</h2>
+                    <p class="text-sm font-light leading-relaxed opacity-70 mb-8">"I believe luxury travel has shifted from 'seeing' to 'feeling'. It is no longer about the gilded lobby, but the private entrance."</p>
+                    <div class="font-serif text-2xl italic">— Bhupesh</div>
+                </div>
+                <div class="space-y-24">
+                    <div class="border-l border-obsidian/10 pl-10">
+                        <h4 class="font-serif text-2xl italic mb-4">The Swiss Alpine Drive</h4>
+                        <p class="text-xs font-light opacity-60">Custom supercar routes across the Julier Pass with helicopter transfers to remote alpine chalets.</p>
+                    </div>
+                    <div class="border-l border-obsidian/10 pl-10">
+                        <h4 class="font-serif text-2xl italic mb-4">Kyoto After Hours</h4>
+                        <p class="text-xs font-light opacity-60">Private access to temples normally closed to the public, accompanied by the city's highest-ranking artisans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry: Minimalist Form -->
+    <section id="inquiry" class="py-64 px-8 bg-obsidian">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-24 text-center">
+                <h2 class="font-serif text-5xl italic mb-6">Begin the Conversation</h2>
+                <p class="text-[10px] kerning-extra uppercase text-bronze">Strictly Private & Confidential</p>
+            </div>
+            
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                <input type="text" placeholder="FULL NAME" required>
+                <input type="email" placeholder="EMAIL ADDRESS" required>
+                <input type="tel" placeholder="CONTACT NUMBER" required>
+                <select class="text-[10px] kerning-extra uppercase">
+                    <option disabled selected>DESIRED REGION</option>
+                    <option>POLAR EXPEDITIONS</option>
+                    <option>AFRICAN SAFARIS</option>
+                    <option>EUROPEAN ESTATES</option>
+                    <option>PRIVATE ISLANDS</option>
+                </select>
+                <div class="md:col-span-2">
+                    <input type="text" placeholder="EXPECTED TRAVEL DATES" class="w-full">
+                </div>
+                <div class="md:col-span-2 flex justify-center mt-20">
+                    <button class="group flex items-center gap-8">
+                        <span class="text-[10px] kerning-extra uppercase font-medium">Submit Inquiry</span>
+                        <div class="w-20 h-px bg-bronze group-hover:w-32 transition-all"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-8 border-t border-ivory/5 flex flex-col md:flex-row justify-between items-center gap-12">
+        <div class="font-serif text-lg italic opacity-40">Discover Luxury</div>
+        <div class="flex gap-12 text-[9px] kerning-extra uppercase opacity-40">
+            <a href="#" class="hover:text-bronze transition-colors">Instagram</a>
+            <a href="#" class="hover:text-bronze transition-colors">WhatsApp Concierge</a>
+            <a href="#" class="hover:text-bronze transition-colors">Privacy</a>
+        </div>
+        <div class="text-[9px] kerning-extra uppercase opacity-30">© 2024 Discover Luxury</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // Custom Cursor
+        const dot = document.querySelector('.cursor-dot');
+        const outline = document.querySelector('.cursor-outline');
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.1 });
+            gsap.to(outline, { x: e.clientX - 20, y: e.clientY - 20, duration: 0.3 });
+        });
+
+        // Hero Reveal
+        const tl = gsap.timeline();
+        tl.to(".reveal-item", {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power4.out",
+            delay: 0.5
+        });
+
+        // Section Mask Reveal
+        gsap.utils.toArray('.reveal-mask').forEach(mask => {
+            ScrollTrigger.create({
+                trigger: mask,
+                start: "top 80%",
+                onEnter: () => mask.classList.add('active')
+            });
+        });
+
+        // Image Parallax
+        gsap.utils.toArray('.image-parallax').forEach(img => {
+            gsap.to(img, {
+                yPercent: -20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: img,
+                    scrub: true
+                }
+            });
+        });
+
+        // Navbar Interaction
+        ScrollTrigger.create({
+            start: "top -50",
+            onUpdate: (self) => {
+                if(self.direction === 1) {
+                    gsap.to("nav", { y: -100, duration: 0.5 });
+                } else {
+                    gsap.to("nav", { y: 0, duration: 0.5 });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
