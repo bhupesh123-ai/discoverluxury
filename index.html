@@ -153,36 +153,30 @@
     </section>
 
     <!-- Inquiry: Minimalist Form -->
-    <section id="inquiry" class="py-64 px-8 bg-obsidian">
-        <div class="max-w-4xl mx-auto">
-            <div class="mb-24 text-center">
-                <h2 class="font-serif text-5xl italic mb-6">Begin the Conversation</h2>
-                <p class="text-[10px] kerning-extra uppercase text-bronze">Strictly Private & Confidential</p>
-            </div>
-            
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-                <input type="text" placeholder="FULL NAME" required>
-                <input type="email" placeholder="EMAIL ADDRESS" required>
-                <input type="tel" placeholder="CONTACT NUMBER" required>
-                <select class="text-[10px] kerning-extra uppercase">
-                    <option disabled selected>DESIRED REGION</option>
-                    <option>POLAR EXPEDITIONS</option>
-                    <option>AFRICAN SAFARIS</option>
-                    <option>EUROPEAN ESTATES</option>
-                    <option>PRIVATE ISLANDS</option>
+    <form action="https://formspree.io/f/xbdpjqqq" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                <input type="text" name="Client_Name" placeholder="FULL NAME" required>
+                <input type="email" name="Client_Email" placeholder="EMAIL ADDRESS" required>
+                <input type="tel" name="Client_Phone" placeholder="CONTACT NUMBER" required>
+                
+                <select name="Desired_Region" class="text-[10px] kerning-extra uppercase">
+                    <option disabled selected value="">DESIRED REGION</option>
+                    <option value="Polar">POLAR EXPEDITIONS</option>
+                    <option value="Safari">AFRICAN SAFARIS</option>
+                    <option value="Europe">EUROPEAN ESTATES</option>
+                    <option value="Islands">PRIVATE ISLANDS</option>
                 </select>
+                
                 <div class="md:col-span-2">
-                    <input type="text" placeholder="EXPECTED TRAVEL DATES" class="w-full">
+                    <input type="text" name="Travel_Dates" placeholder="EXPECTED TRAVEL DATES" class="w-full">
                 </div>
+                
                 <div class="md:col-span-2 flex justify-center mt-20">
-                    <button class="group flex items-center gap-8">
+                    <button type="submit" class="group flex items-center gap-8 cursor-pointer">
                         <span class="text-[10px] kerning-extra uppercase font-medium">Submit Inquiry</span>
                         <div class="w-20 h-px bg-bronze group-hover:w-32 transition-all"></div>
                     </button>
                 </div>
             </form>
-        </div>
-    </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
