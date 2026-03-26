@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <nav class="fixed top-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference">
-        
-        <a href="/" class="group flex flex-col">
-            <span class="font-serif text-2xl md:text-3xl tracking-[0.3em] uppercase text-ivory group-hover:text-bronze transition-colors duration-700">Discover Luxury</span>
-            <span class="text-[7px] tracking-[0.5em] uppercase text-ivory/50 mt-2 ml-1">Private Office</span>
-        </a>
-        
-        <div class="flex items-center gap-12">
-            <a href="#inquiry" class="hidden md:block text-[10px] kerning-extra uppercase font-light border-b border-bronze/40 pb-1 hover:border-bronze transition-all">Begin a Conversation</a>
-            <div class="w-10 h-px bg-ivory/60"></div>
-        </div>
-    </nav>
-    <!-- Frameworks -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCOVER LUXURY | Private Journeys</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -56,16 +47,17 @@
             padding: 1.5rem 0 !important;
             font-weight: 200;
             transition: border-color 0.5s ease;
+            color: #E5E5E5;
         }
-        input:focus { border-bottom-color: #B89564 !important; outline: none; }
+        input:focus, select:focus { border-bottom-color: #B89564 !important; outline: none; }
+        select option { background-color: #030303; color: #E5E5E5; }
 
-  .image-parallax { transform: scale(1.2); transition: transform 2s cubic-bezier(0, 0.55, 0.45, 1); }
+        .image-parallax { transform: scale(1.2); transition: transform 2s cubic-bezier(0, 0.55, 0.45, 1); }
         
         /* Custom Cursor */
         .cursor-dot { width: 6px; height: 6px; background: #B89564; position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; }
         .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(184, 149, 100, 0.3); position: fixed; border-radius: 50%; pointer-events: none; z-index: 9998; transition: transform 0.15s ease-out; }
     </style>
-</head>
 </head>
 <body class="font-sans antialiased selection:bg-bronze selection:text-white">
 
@@ -73,12 +65,10 @@
     <div class="cursor-outline hidden lg:block"></div>
 
     <nav class="fixed top-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference">
-        
         <a href="/" class="group flex flex-col">
             <span class="font-serif text-2xl md:text-3xl tracking-[0.3em] uppercase text-ivory group-hover:text-bronze transition-colors duration-700">Discover Luxury</span>
             <span class="text-[7px] tracking-[0.5em] uppercase text-ivory/50 mt-2 ml-1">Private Office</span>
         </a>
-        
         <div class="flex items-center gap-12">
             <a href="#inquiry" class="hidden md:block text-[10px] kerning-extra uppercase font-light border-b border-bronze/40 pb-1 hover:border-bronze transition-all">Begin a Conversation</a>
             <div class="w-10 h-px bg-ivory/60"></div>
@@ -86,17 +76,12 @@
     </nav>
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-    </nav>
-
-    <!-- Hero: Cinematic & Silent -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-40 scale-110" id="hero-video">
             <source src="https://assets.mixkit.co/videos/preview/mixkit-luxury-resort-with-a-pool-near-the-ocean-4064-large.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-gradient-to-b from-obsidian via-transparent to-obsidian"></div>
         
-      <div class="relative z-10 text-center px-4">
-            
+        <div class="relative z-10 text-center px-4 w-full">
             <h1 class="font-serif text-6xl md:text-[10rem] italic leading-none kerning-title mb-6 opacity-0 translate-y-20 reveal-item">
                 The Unseen <br> <span class="md:ml-32">World</span>
             </h1>
@@ -106,23 +91,18 @@
             </p>
 
             <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.4s;">
-                
                 <a href="#inquiry" class="border border-bronze/50 hover:border-bronze px-10 py-4 text-[9px] kerning-extra uppercase tracking-widest transition-all hover:bg-bronze/10 text-ivory">
                     Request Private Itinerary
                 </a>
-                
                 <a href="#experiences" class="text-[9px] kerning-extra uppercase font-light opacity-60 hover:opacity-100 transition-opacity flex items-center gap-4 group">
                     Explore Collection 
                     <span class="text-bronze transform group-hover:translate-y-1 transition-transform">↓</span>
                 </a>
-                
             </div>
-        
+        </div>
     </section>
-    
 
-    <!-- Narrative Section: Spacing and Typography Focus -->
-    <section class="py-64 px-8 md:px-24 bg-obsidian">
+    <section class="py-40 px-8 md:px-24 bg-obsidian border-b border-ivory/5">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <div class="reveal-mask">
                 <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000" alt="Detail" class="w-full h-[700px] object-cover grayscale hover:grayscale-0 transition-all duration-1000">
@@ -133,19 +113,17 @@
                 <p class="text-ivory/50 font-light leading-loose max-w-md">
                     We architect journeys for the few who have seen it all. Our role is to provide the invisible threads that connect rare access, absolute security, and profound cultural immersion.
                 </p>
-                <p class="text-[10px] kerning-extra uppercase text-bronze font-medium tracking-widest">Discoverluxury.in — Private Office</p>
             </div>
         </div>
     </section>
-<section id="pedigree" class="py-40 px-8 bg-obsidian border-t border-ivory/5 relative overflow-hidden">
+
+    <section id="pedigree" class="py-40 px-8 bg-obsidian border-b border-ivory/5 relative overflow-hidden">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-                
                 <div class="lg:col-span-6 space-y-10 reveal-item opacity-0 translate-y-10">
                     <span class="text-[9px] kerning-extra uppercase text-bronze tracking-widest block">The Pedigree</span>
                     <h2 class="font-serif text-5xl italic leading-tight text-ivory">Discretion, Access, and Diplomatic Trust.</h2>
                     <div class="w-12 h-px bg-bronze"></div>
-                    
                     <div class="space-y-6">
                         <p class="text-ivory/60 font-light leading-loose text-sm">
                             Discover Luxury operates as the private, high-net-worth curation arm of Pristine Vacations. Founded by Bhupesh, our mandate is simple: to engineer travel experiences that exist entirely off the grid.
@@ -153,31 +131,20 @@
                         <p class="text-ivory/60 font-light leading-loose text-sm">
                             True luxury requires unimpeachable logistics. Operating as an officially authorized agent for multiple global embassies and diplomatic missions, our operational foundation is built on diplomatic-level scrutiny, absolute security, and seamless global access. 
                         </p>
-                        <p class="text-ivory/60 font-light leading-loose text-sm">
-                            We handle the invisible, complex architecture of international movement so you can focus entirely on the extraordinary.
-                        </p>
-                    </div>
-                    
-                    <div class="pt-8 border-t border-ivory/10 inline-block pr-16">
-                        <div class="font-serif italic text-2xl text-ivory">Bhupesh</div>
-                        <div class="text-[9px] kerning-extra uppercase text-bronze mt-2">Principal Curator</div>
                     </div>
                 </div>
-
                 <div class="lg:col-span-6 reveal-mask">
                     <div class="relative h-[600px] overflow-hidden group">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000" alt="Global Access" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
                         <div class="absolute inset-0 border border-bronze/20 m-6 pointer-events-none transition-all duration-700 group-hover:m-4"></div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <!-- Signature Experiences: Asymmetric Grid -->
-   <section id="experiences" class="py-32 px-8">
+
+    <section id="experiences" class="py-40 px-8">
         <div class="container mx-auto">
-            
             <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-24 text-[10px] kerning-extra uppercase tracking-widest text-ivory/50">
                 <button class="filter-btn text-bronze border-b border-bronze pb-1 transition-all" data-filter="All">All</button>
                 <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Polar">Polar</button>
@@ -185,66 +152,53 @@
                 <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Islands">Islands</button>
                 <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Europe">Europe</button>
             </div>
-
-            <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20">
-                </div>
-
+            <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20"></div>
         </div>
     </section>
 
-    <!-- Curation Section: Editorial Layout -->
-  <section class="py-40 bg-white text-obsidian relative">
+    <section class="py-40 bg-white text-obsidian relative">
         <div class="container mx-auto px-8 max-w-6xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-                
                 <div class="lg:col-span-5 reveal-item opacity-0 translate-y-10">
                     <span class="text-[9px] kerning-extra uppercase opacity-40 mb-10 block">The Founder's Promise</span>
                     <h2 class="font-serif text-6xl md:text-7xl italic leading-tight mb-10">Personally <br>Curated by <br>Bhupesh.</h2>
                     <p class="text-sm font-light leading-relaxed opacity-80 mb-8 max-w-md">"I believe true luxury has shifted from 'seeing' to 'feeling'. It is no longer about the gilded lobby, but the private entrance. Every journey we design is an original piece of architecture, built entirely around your rhythm."</p>
                     <div class="w-12 h-px bg-obsidian/20"></div>
                 </div>
-
                 <div class="lg:col-span-7 lg:pl-16 reveal-item opacity-0 translate-y-10" style="transition-delay: 0.2s;">
                     <h3 class="text-[10px] kerning-extra uppercase tracking-widest opacity-40 mb-16">Why Discerning Travelers Choose Us</h3>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                         <div class="border-l border-obsidian/10 pl-8">
                             <h4 class="font-serif text-2xl italic mb-4">Private Access</h4>
                             <p class="text-xs font-light opacity-60 leading-relaxed">We bypass the public sphere. Expect after-hours access to landmarks, private museum viewings, and entry to off-market estates.</p>
                         </div>
-                        
                         <div class="border-l border-obsidian/10 pl-8">
                             <h4 class="font-serif text-2xl italic mb-4">Bespoke Planning</h4>
                             <p class="text-xs font-light opacity-60 leading-relaxed">No templates. No packaged tours. Every itinerary is engineered from a blank canvas to match your specific cadence and tastes.</p>
                         </div>
-
                         <div class="border-l border-obsidian/10 pl-8">
                             <h4 class="font-serif text-2xl italic mb-4">Global Network</h4>
                             <p class="text-xs font-light opacity-60 leading-relaxed">Leveraging our diplomatic-level status to connect you with elite local fixers, royalty, and world-class naturalists.</p>
                         </div>
-
                         <div class="border-l border-obsidian/10 pl-8">
                             <h4 class="font-serif text-2xl italic mb-4">End-to-End Concierge</h4>
                             <p class="text-xs font-light opacity-60 leading-relaxed">From tarmac VIP greetings to securing impossible dinner reservations, your journey is entirely frictionless from departure to return.</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-
-    <!-- Inquiry: Minimalist Form -->
- <section id="inquiry" class="py-64 px-8 bg-obsidian">
+    <section id="inquiry" class="py-40 px-8 bg-obsidian border-t border-ivory/5">
         <div class="max-w-4xl mx-auto">
             <div class="mb-24 text-center">
                 <h2 class="font-serif text-5xl italic mb-6">Begin the Conversation</h2>
                 <p class="text-[10px] kerning-extra uppercase text-bronze">Strictly Private & Confidential</p>
             </div>
             
-           <form id="inquiry-form" action="https://formspree.io/f/xbdpjqqq" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 transition-opacity duration-500">
-                    
+            <div id="form-container" class="relative">
+                <form id="inquiry-form" action="https://formspree.io/f/xbdpjqqq" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 transition-opacity duration-500">
                     <input type="text" name="Client_Name" placeholder="FULL NAME" required>
                     <input type="email" name="Client_Email" placeholder="EMAIL ADDRESS" required>
                     
@@ -268,7 +222,7 @@
                     
                     <div class="md:col-span-2 flex justify-center mt-20">
                         <button type="submit" id="submit-btn" class="group flex items-center gap-8 cursor-pointer">
-                            <span class="text-[10px] kerning-extra uppercase font-medium">Request Private Itinerary</span>
+                            <span class="text-[10px] kerning-extra uppercase font-medium">Submit Inquiry</span>
                             <div class="w-20 h-px bg-bronze group-hover:w-32 transition-all"></div>
                         </button>
                     </div>
@@ -283,13 +237,11 @@
         </div>
     </section>
 
-   <footer class="py-20 px-8 border-t border-ivory/5 flex flex-col md:flex-row justify-between items-center gap-12 bg-obsidian">
+    <footer class="py-20 px-8 border-t border-ivory/5 flex flex-col md:flex-row justify-between items-center gap-12 bg-obsidian">
         <div class="font-serif text-lg italic opacity-40">Discover Luxury</div>
         <div class="flex gap-12 text-[9px] kerning-extra uppercase opacity-40">
             <a href="#" class="hover:text-bronze transition-colors">Instagram</a>
-            
             <a href="https://wa.me/919876003384?text=Hello%20Discover%20Luxury.%20I%20would%20like%20to%20discuss%20curating%20a%20private%20journey." target="_blank" rel="noopener noreferrer" class="hover:text-bronze transition-colors">WhatsApp Concierge</a>
-            
             <a href="#" class="hover:text-bronze transition-colors">Privacy</a>
         </div>
         <div class="text-[9px] kerning-extra uppercase opacity-30">© 2024 Discover Luxury</div>
@@ -301,17 +253,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
     <script>
-        // ==========================================
-        // PART 1: UI ANIMATIONS & PHYSICS (GSAP)
-        // ==========================================
         gsap.registerPlugin(ScrollTrigger);
 
-        // Smooth Scroll
         const lenis = new Lenis();
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
 
-        // Custom Cursor
         const dot = document.querySelector('.cursor-dot');
         const outline = document.querySelector('.cursor-outline');
         if (dot && outline) {
@@ -321,11 +268,9 @@
             });
         }
 
-        // Hero Reveal
         const tl = gsap.timeline();
         tl.to(".reveal-item", { opacity: 1, y: 0, duration: 1.5, stagger: 0.2, ease: "power4.out", delay: 0.5 });
 
-        // Section Mask Reveal
         gsap.utils.toArray('.reveal-mask').forEach(mask => {
             ScrollTrigger.create({
                 trigger: mask,
@@ -334,7 +279,6 @@
             });
         });
 
-        // Navbar Interaction
         ScrollTrigger.create({
             start: "top -50",
             onUpdate: (self) => {
@@ -346,7 +290,6 @@
             }
         });
 
-        // Initialize Parallax
         function initParallax() {
             gsap.utils.toArray('.image-parallax').forEach(img => {
                 gsap.to(img, {
@@ -357,12 +300,7 @@
         }
         initParallax();
 
-
-        // ==========================================
-        // PART 2: GOOGLE SHEETS DYNAMIC ENGINE
-        // ==========================================
         const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQW6tMXFG_pJso1y5jVIq-la_P4yqVgr2nM7Q_YUji5aIbLQNP35f1QWt04bji4IF6Q8mqJhbf4MjSu/pub?output=csv'; 
-        
         const gridContainer = document.getElementById('experience-grid');
         let allExperiences = [];
 
@@ -416,9 +354,6 @@
             });
         });
 
-        // ==========================================
-        // PART 3: INQUIRY FORM BACKGROUND SUBMISSION
-        // ==========================================
         const inquiryForm = document.getElementById('inquiry-form');
         const successMessage = document.getElementById('success-message');
         const submitBtnText = document.querySelector('#submit-btn span');
@@ -459,10 +394,6 @@
                     alert("Network error. Please try again.");
                 }
             });
-        }
-    </script>
-</body>
-</html>
         }
     </script>
 </body>
