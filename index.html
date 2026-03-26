@@ -153,35 +153,40 @@
     </section>
 
     <!-- Inquiry: Minimalist Form -->
-    <form action="https://formspree.io/f/xbdpjqqq" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-                <input type="text" name="Client_Name" placeholder="FULL NAME" required>
-                <input type="email" name="Client_Email" placeholder="EMAIL ADDRESS" required>
-                <input type="tel" name="Client_Phone" placeholder="CONTACT NUMBER" required>
+   <div id="form-container" class="relative">
                 
-                <select name="Desired_Region" class="text-[10px] kerning-extra uppercase">
-                    <option disabled selected value="">DESIRED REGION</option>
-                    <option value="Polar">POLAR EXPEDITIONS</option>
-                    <option value="Safari">AFRICAN SAFARIS</option>
-                    <option value="Europe">EUROPEAN ESTATES</option>
-                    <option value="Islands">PRIVATE ISLANDS</option>
-                </select>
-                
-                <div class="md:col-span-2">
-                    <input type="text" name="Travel_Dates" placeholder="EXPECTED TRAVEL DATES" class="w-full">
-                </div>
-                
-                <div class="md:col-span-2 flex justify-center mt-20">
-                    <button type="submit" class="group flex items-center gap-8 cursor-pointer">
-                        <span class="text-[10px] kerning-extra uppercase font-medium">Submit Inquiry</span>
-                        <div class="w-20 h-px bg-bronze group-hover:w-32 transition-all"></div>
-                    </button>
-                </div>
-            </form>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+                <form id="inquiry-form" action="https://formspree.io/f/xbdpjqqq" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 transition-opacity duration-500">
+                    <input type="text" name="Client_Name" placeholder="FULL NAME" required>
+                    <input type="email" name="Client_Email" placeholder="EMAIL ADDRESS" required>
+                    <input type="tel" name="Client_Phone" placeholder="CONTACT NUMBER" required>
+                    
+                    <select name="Desired_Region" class="text-[10px] kerning-extra uppercase">
+                        <option disabled selected value="">DESIRED REGION</option>
+                        <option value="Polar">POLAR EXPEDITIONS</option>
+                        <option value="Safari">AFRICAN SAFARIS</option>
+                        <option value="Europe">EUROPEAN ESTATES</option>
+                        <option value="Islands">PRIVATE ISLANDS</option>
+                    </select>
+                    
+                    <div class="md:col-span-2">
+                        <input type="text" name="Travel_Dates" placeholder="EXPECTED TRAVEL DATES" class="w-full">
+                    </div>
+                    
+                    <div class="md:col-span-2 flex justify-center mt-20">
+                        <button type="submit" id="submit-btn" class="group flex items-center gap-8 cursor-pointer">
+                            <span class="text-[10px] kerning-extra uppercase font-medium">Submit Inquiry</span>
+                            <div class="w-20 h-px bg-bronze group-hover:w-32 transition-all"></div>
+                        </button>
+                    </div>
+                </form>
 
+                <div id="success-message" class="hidden absolute inset-0 flex flex-col items-center justify-center text-center opacity-0">
+                    <h3 class="font-serif text-4xl italic text-ivory mb-6">Your inquiry has been received.</h3>
+                    <div class="w-12 h-px bg-bronze mb-6"></div>
+                    <p class="text-ivory/50 font-light leading-relaxed max-w-md mx-auto">A curator from our private office will contact you shortly to begin designing your bespoke experience.</p>
+                </div>
+                
+            </div>
     <script>
         // ==========================================
         // PART 1: UI ANIMATIONS & PHYSICS (GSAP)
@@ -306,6 +311,53 @@
                 renderCards(e.target.getAttribute('data-filter'));
             });
         });
+        // ==========================================
+        // PART 3: INQUIRY FORM BACKGROUND SUBMISSION
+        // ==========================================
+        const inquiryForm = document.getElementById('inquiry-form');
+        const successMessage = document.getElementById('success-message');
+        const submitBtnText = document.querySelector('#submit-btn span');
+
+        if (inquiryForm) {
+            inquiryForm.addEventListener('submit', async function(e) {
+                e.preventDefault(); // Stops the redirect to Formspree
+                
+                // Change button text so the user knows it's working
+                const originalText = submitBtnText.innerText;
+                submitBtnText.innerText = "TRANSMITTING...";
+                
+                const formData = new FormData(inquiryForm);
+                
+                try {
+                    const response = await fetch(inquiryForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    
+                    if (response.ok) {
+                        // Cinematic Fade Out of the form
+                        gsap.to(inquiryForm, { 
+                            opacity: 0, 
+                            duration: 0.8, 
+                            onComplete: () => {
+                                inquiryForm.classList.add('hidden');
+                                successMessage.classList.remove('hidden');
+                                // Cinematic Fade In of the success message
+                                gsap.to(successMessage, { opacity: 1, duration: 1.2, ease: "power2.out" });
+                            }
+                        });
+                        inquiryForm.reset(); // Clear the data
+                    } else {
+                        submitBtnText.innerText = originalText;
+                        alert("There was an issue securely transmitting your request. Please try again.");
+                    }
+                } catch (error) {
+                    submitBtnText.innerText = originalText;
+                    alert("Network error. Please try again.");
+                }
+            });
+        }
     </script>
 </body>
 </html>
