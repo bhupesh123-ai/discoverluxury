@@ -196,23 +196,28 @@
                 <p class="text-[10px] kerning-extra uppercase text-bronze">Strictly Private & Confidential</p>
             </div>
             
-            <div id="form-container" class="relative">
-                <form id="inquiry-form" action="https://formspree.io/f/xbdpjqqq" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 transition-opacity duration-500">
+           <form id="inquiry-form" action="https://formspree.io/f/xbdpjqqq" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 transition-opacity duration-500">
+                    
                     <input type="text" name="Client_Name" placeholder="FULL NAME" required>
                     <input type="email" name="Client_Email" placeholder="EMAIL ADDRESS" required>
-                    <input type="tel" name="Client_Phone" placeholder="CONTACT NUMBER" required>
                     
-                    <select name="Desired_Region" class="text-[10px] kerning-extra uppercase">
-                        <option disabled selected value="">DESIRED REGION</option>
+                    <input type="tel" name="Client_Phone" placeholder="CONTACT NUMBER" required>
+                    <select name="Destination_Interest" class="text-[10px] kerning-extra uppercase" required>
+                        <option disabled selected value="">DESTINATION INTEREST</option>
                         <option value="Polar">POLAR EXPEDITIONS</option>
                         <option value="Safari">AFRICAN SAFARIS</option>
                         <option value="Europe">EUROPEAN ESTATES</option>
                         <option value="Islands">PRIVATE ISLANDS</option>
+                        <option value="Undecided">OPEN TO INSPIRATION</option>
                     </select>
                     
-                    <div class="md:col-span-2">
-                        <input type="text" name="Travel_Dates" placeholder="EXPECTED TRAVEL DATES" class="w-full">
-                    </div>
+                    <input type="text" name="Travel_Dates" placeholder="EXPECTED TRAVEL DATES" class="w-full">
+                    <select name="Anticipated_Investment" class="text-[10px] kerning-extra uppercase" required>
+                        <option disabled selected value="">ANTICIPATED INVESTMENT</option>
+                        <option value="5L_10L">₹5L – ₹10L</option>
+                        <option value="10L_25L">₹10L – ₹25L</option>
+                        <option value="25L_Plus">₹25L+ (BESPOKE RESERVE)</option>
+                    </select>
                     
                     <div class="md:col-span-2 flex justify-center mt-20">
                         <button type="submit" id="submit-btn" class="group flex items-center gap-8 cursor-pointer">
