@@ -111,48 +111,20 @@
     </section>
 
     <!-- Signature Experiences: Asymmetric Grid -->
-    <section id="experiences" class="py-32 px-8">
+   <section id="experiences" class="py-32 px-8">
         <div class="container mx-auto">
-            <!-- Row 1 -->
-            <div class="flex flex-col md:flex-row gap-20 mb-40">
-                <div class="md:w-7/12 group overflow-hidden relative">
-                    <div class="overflow-hidden h-[600px]">
-                        <img src="https://dfxbkzl1rmlaca6a.public.blob.vercel-storage.com/white%20desert.jpg" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
-                    </div>
-                    <div class="mt-8">
-                        <span class="text-[9px] kerning-extra text-bronze uppercase">Antarctica</span>
-                        <h3 class="font-serif text-3xl italic mt-2">The White Desert Fly-In</h3>
-                    </div>
-                </div>
-                <div class="md:w-4/12 md:mt-48 group">
-                    <div class="overflow-hidden h-[450px]">
-                        <img src="https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?q=80&w=2000" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
-                    </div>
-                    <div class="mt-8">
-                        <span class="text-[9px] kerning-extra text-bronze uppercase">Africa</span>
-                        <h3 class="font-serif text-3xl italic mt-2">The Great Migration Private Camp</h3>
-                    </div>
-                </div>
+            
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-24 text-[10px] kerning-extra uppercase tracking-widest text-ivory/50">
+                <button class="filter-btn text-bronze border-b border-bronze pb-1 transition-all" data-filter="All">All</button>
+                <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Polar">Polar</button>
+                <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Safari">Safari</button>
+                <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Islands">Islands</button>
+                <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Europe">Europe</button>
             </div>
 
-            <!-- Row 2 -->
-            <div class="flex flex-col md:flex-row-reverse gap-20">
-                <div class="md:w-7/12 group overflow-hidden">
-                    <div class="overflow-hidden h-[600px]">
-                        <img src="https://dfxbkzl1rmlaca6a.public.blob.vercel-storage.com/private%20island.jpg" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
-                    </div>
-                    <div class="mt-8">
-                        <span class="text-[9px] kerning-extra text-bronze uppercase">Private Islands</span>
-                        <h3 class="font-serif text-3xl italic mt-2">Private Island Sanctuary</h3>
-                    </div>
+            <div id="experience-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20">
                 </div>
-                <div class="md:w-3/12 group">
-                    <p class="text-xs text-ivory/40 leading-loose mb-12 italic">Every experience is tailored by our global network of fixers, conservationists, and historians.</p>
-                    <div class="overflow-hidden h-[300px]">
-                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2000" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -211,24 +183,15 @@
             </form>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="py-20 px-8 border-t border-ivory/5 flex flex-col md:flex-row justify-between items-center gap-12">
-        <div class="font-serif text-lg italic opacity-40">Discover Luxury</div>
-        <div class="flex gap-12 text-[9px] kerning-extra uppercase opacity-40">
-            <a href="#" class="hover:text-bronze transition-colors">Instagram</a>
-            <a href="#" class="hover:text-bronze transition-colors">WhatsApp Concierge</a>
-            <a href="#" class="hover:text-bronze transition-colors">Privacy</a>
-        </div>
-        <div class="text-[9px] kerning-extra uppercase opacity-30">© 2024 Discover Luxury</div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
     <script>
+        // ==========================================
+        // PART 1: UI ANIMATIONS & PHYSICS (GSAP)
+        // ==========================================
         gsap.registerPlugin(ScrollTrigger);
 
         // Smooth Scroll
@@ -239,21 +202,16 @@
         // Custom Cursor
         const dot = document.querySelector('.cursor-dot');
         const outline = document.querySelector('.cursor-outline');
-        window.addEventListener('mousemove', (e) => {
-            gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.1 });
-            gsap.to(outline, { x: e.clientX - 20, y: e.clientY - 20, duration: 0.3 });
-        });
+        if (dot && outline) {
+            window.addEventListener('mousemove', (e) => {
+                gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.1 });
+                gsap.to(outline, { x: e.clientX - 20, y: e.clientY - 20, duration: 0.3 });
+            });
+        }
 
         // Hero Reveal
         const tl = gsap.timeline();
-        tl.to(".reveal-item", {
-            opacity: 1,
-            y: 0,
-            duration: 1.5,
-            stagger: 0.2,
-            ease: "power4.out",
-            delay: 0.5
-        });
+        tl.to(".reveal-item", { opacity: 1, y: 0, duration: 1.5, stagger: 0.2, ease: "power4.out", delay: 0.5 });
 
         // Section Mask Reveal
         gsap.utils.toArray('.reveal-mask').forEach(mask => {
@@ -261,18 +219,6 @@
                 trigger: mask,
                 start: "top 80%",
                 onEnter: () => mask.classList.add('active')
-            });
-        });
-
-        // Image Parallax
-        gsap.utils.toArray('.image-parallax').forEach(img => {
-            gsap.to(img, {
-                yPercent: -20,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: img,
-                    scrub: true
-                }
             });
         });
 
@@ -286,6 +232,85 @@
                     gsap.to("nav", { y: 0, duration: 0.5 });
                 }
             }
+        });
+
+        // Initialize Parallax (Wrapped in a function so we can call it again later)
+        function initParallax() {
+            gsap.utils.toArray('.image-parallax').forEach(img => {
+                gsap.to(img, {
+                    yPercent: -20, ease: "none",
+                    scrollTrigger: { trigger: img, scrub: true }
+                });
+            });
+        }
+        initParallax(); // Run once on load
+
+
+        // ==========================================
+        // PART 2: GOOGLE SHEETS DYNAMIC ENGINE
+        // ==========================================
+        
+        // PASTE YOUR PUBLISHED CSV LINK HERE:
+        const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQW6tMXFG_pJso1y5jVIq-la_P4yqVgr2nM7Q_YUji5aIbLQNP35f1QWt04bji4IF6Q8mqJhbf4MjSu/pub?output=csv'; 
+        
+        const gridContainer = document.getElementById('experience-grid');
+        let allExperiences = [];
+
+        // Fetch data from Google Sheets
+        Papa.parse(sheetUrl, {
+            download: true,
+            header: true,
+            complete: function(results) {
+                allExperiences = results.data.filter(item => item.Title); // Remove empty rows
+                renderCards('All'); // Initial load
+            }
+        });
+
+        // Build the HTML Cards
+        function renderCards(filterCategory) {
+            if (!gridContainer) return; // Safety check
+            gridContainer.innerHTML = ''; // Clear current cards
+            
+            allExperiences.forEach(trip => {
+                if (filterCategory === 'All' || trip.Category === filterCategory) {
+                    const cardHTML = `
+                        <div class="group overflow-hidden relative cursor-pointer experience-card reveal-item opacity-0 translate-y-10">
+                            <div class="overflow-hidden h-[500px]">
+                                <img src="${trip.ImageURL}" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+                            </div>
+                            <div class="mt-8">
+                                <span class="text-[9px] kerning-extra text-bronze uppercase">${trip.Category}</span>
+                                <h3 class="font-serif text-3xl italic mt-2 text-ivory">${trip.Title}</h3>
+                                <p class="text-xs text-ivory/50 mt-4 font-light leading-relaxed max-w-md">${trip.Description}</p>
+                            </div>
+                        </div>
+                    `;
+                    gridContainer.innerHTML += cardHTML;
+                }
+            });
+
+            // Re-trigger animations for the new cards
+            setTimeout(() => {
+                gsap.to(".experience-card", { opacity: 1, y: 0, duration: 1, stagger: 0.1, ease: "power3.out" });
+                initParallax(); // Re-apply parallax to new images
+                ScrollTrigger.refresh(); // Fix scrolling physics
+            }, 100);
+        }
+
+        // Filter Menu Click Logic
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Reset styling on all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('text-bronze', 'border-bronze');
+                    b.classList.add('border-transparent');
+                });
+                // Add styling to clicked button
+                e.target.classList.add('text-bronze', 'border-bronze');
+                e.target.classList.remove('border-transparent');
+                // Filter the cards
+                renderCards(e.target.getAttribute('data-filter'));
+            });
         });
     </script>
 </body>
