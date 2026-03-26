@@ -66,18 +66,26 @@
         .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(184, 149, 100, 0.3); position: fixed; border-radius: 50%; pointer-events: none; z-index: 9998; transition: transform 0.15s ease-out; }
     </style>
 </head>
+</head>
 <body class="font-sans antialiased selection:bg-bronze selection:text-white">
 
     <div class="cursor-dot hidden lg:block"></div>
     <div class="cursor-outline hidden lg:block"></div>
 
-    <!-- Minimal Nav -->
     <nav class="fixed top-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference">
-        <a href="/" class="font-serif text-xl kerning-extra uppercase opacity-80 hover:opacity-100 transition-opacity">Discover Luxury</a>
+        
+        <a href="/" class="group flex flex-col">
+            <span class="font-serif text-2xl md:text-3xl tracking-[0.3em] uppercase text-ivory group-hover:text-bronze transition-colors duration-700">Discover Luxury</span>
+            <span class="text-[7px] tracking-[0.5em] uppercase text-ivory/50 mt-2 ml-1">Private Office</span>
+        </a>
+        
         <div class="flex items-center gap-12">
             <a href="#inquiry" class="hidden md:block text-[10px] kerning-extra uppercase font-light border-b border-bronze/40 pb-1 hover:border-bronze transition-all">Begin a Conversation</a>
             <div class="w-10 h-px bg-ivory/60"></div>
         </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
     </nav>
 
     <!-- Hero: Cinematic & Silent -->
