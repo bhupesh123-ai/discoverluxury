@@ -39,20 +39,20 @@
         .reveal-mask { clip-path: inset(0 100% 0 0); transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1); }
         .reveal-mask.active { clip-path: inset(0 0 0 0); }
 
-        /* Minimal Inputs */
+       /* Minimal Inputs - VISIBILITY UPGRADE */
         input, select {
             background: transparent !important;
             border: none !important;
-            border-bottom: 1px solid rgba(229, 229, 229, 0.2) !important;
+            border-bottom: 1px solid rgba(229, 229, 229, 0.5) !important; /* Brighter line */
             padding: 1.5rem 0 !important;
-            font-weight: 200;
+            font-weight: 400; /* Thicker text */
             transition: border-color 0.5s ease;
             color: #E5E5E5;
+            font-size: 14px; /* Force readable size on mobile */
         }
         input:focus, select:focus { border-bottom-color: #B89564 !important; outline: none; }
-        select option { background-color: #030303; color: #E5E5E5; }
-
-        .image-parallax { transform: scale(1.2); transition: transform 2s cubic-bezier(0, 0.55, 0.45, 1); }
+        select option { background-color: #030303; color: #E5E5E5; font-weight: 400; }
+        input::placeholder { color: rgba(229, 229, 229, 0.7); } /* Brighter placeholders */
         
         /* Custom Cursor */
         .cursor-dot { width: 6px; height: 6px; background: #B89564; position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; }
@@ -64,13 +64,13 @@
     <div class="cursor-dot hidden lg:block"></div>
     <div class="cursor-outline hidden lg:block"></div>
 
-    <nav class="fixed top-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference">
+   <nav class="fixed top-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference">
         <a href="/" class="group flex flex-col">
             <span class="font-serif text-2xl md:text-3xl tracking-[0.3em] uppercase text-ivory group-hover:text-bronze transition-colors duration-700">Discover Luxury</span>
-            <span class="text-[7px] tracking-[0.5em] uppercase text-ivory/50 mt-2 ml-1">Private Office</span>
+            <span class="text-[9px] tracking-[0.4em] font-medium uppercase text-ivory/80 mt-2 ml-1">Private Office</span>
         </a>
         <div class="flex items-center gap-12">
-            <a href="#inquiry" class="hidden md:block text-[10px] kerning-extra uppercase font-light border-b border-bronze/40 pb-1 hover:border-bronze transition-all">Begin a Conversation</a>
+            <a href="#inquiry" class="hidden md:block text-[11px] kerning-extra uppercase font-medium border-b border-bronze/60 pb-1 hover:border-bronze transition-all text-ivory/90">Begin a Conversation</a>
             <div class="w-10 h-px bg-ivory/60"></div>
         </div>
     </nav>
@@ -86,15 +86,15 @@
                 The Unseen <br> <span class="md:ml-32">World</span>
             </h1>
             
-            <p class="text-ivory/70 font-light tracking-widest kerning-extra uppercase text-[9px] md:text-xs max-w-lg mx-auto mb-16 opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.2s;">
-                Architecting private journeys across Antarctica, Africa, and beyond.
+            <p class="text-ivory/90 font-medium tracking-[0.3em] uppercase text-[11px] md:text-sm max-w-2xl mx-auto mb-16 opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.2s;">
+                Curating off-the-grid private journeys across Antarctica, Africa, and beyond.
             </p>
 
             <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.4s;">
                 <a href="#inquiry" class="border border-bronze/50 hover:border-bronze px-10 py-4 text-[9px] kerning-extra uppercase tracking-widest transition-all hover:bg-bronze/10 text-ivory">
                     Request Private Itinerary
                 </a>
-                <a href="#experiences" class="text-[9px] kerning-extra uppercase font-light opacity-60 hover:opacity-100 transition-opacity flex items-center gap-4 group">
+                <a href="#experiences" class="text-[11px] kerning-extra uppercase font-light opacity-60 hover:opacity-100 transition-opacity flex items-center gap-4 group">
                     Explore Collection 
                     <span class="text-bronze transform group-hover:translate-y-1 transition-transform">↓</span>
                 </a>
@@ -105,13 +105,13 @@
     <section class="py-40 px-8 md:px-24 bg-obsidian border-b border-ivory/5">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <div class="reveal-mask">
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000" alt="Detail" class="w-full h-[700px] object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=2000" alt="Private Reserve" class="w-full h-[700px] object-cover grayscale hover:grayscale-0 transition-all duration-1000">
             </div>
             <div class="space-y-12">
                 <h2 class="font-serif text-4xl md:text-6xl italic leading-tight">"Luxury is not a destination, but a state of absolute privacy."</h2>
                 <div class="w-20 h-px bg-bronze"></div>
-                <p class="text-ivory/50 font-light leading-loose max-w-md">
-                    We architect journeys for the few who have seen it all. Our role is to provide the invisible threads that connect rare access, absolute security, and profound cultural immersion.
+                <p class="text-ivory/80 font-normal leading-loose max-w-md">
+                    We Curate journeys for the few who have seen it all. Our role is to provide the invisible threads that connect rare access, absolute security, and profound cultural immersion.
                 </p>
             </div>
         </div>
@@ -125,17 +125,17 @@
                     <h2 class="font-serif text-5xl italic leading-tight text-ivory">Discretion, Access, and Diplomatic Trust.</h2>
                     <div class="w-12 h-px bg-bronze"></div>
                     <div class="space-y-6">
-                        <p class="text-ivory/60 font-light leading-loose text-sm">
+                        <p class="text-ivory/80 font-normal leading-loose text-sm">
                             Discover Luxury operates as the private, high-net-worth curation arm of Pristine Vacations. Founded by Bhupesh, our mandate is simple: to engineer travel experiences that exist entirely off the grid.
                         </p>
-                        <p class="text-ivory/60 font-light leading-loose text-sm">
+                        <p class="text-ivory/80 font-normal-light leading-loose text-sm">
                             True luxury requires unimpeachable logistics. Operating as an officially authorized agent for multiple global embassies and diplomatic missions, our operational foundation is built on diplomatic-level scrutiny, absolute security, and seamless global access. 
                         </p>
                     </div>
                 </div>
                 <div class="lg:col-span-6 reveal-mask">
                     <div class="relative h-[600px] overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000" alt="Global Access" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                      <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2000" alt="Global Access" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
                         <div class="absolute inset-0 border border-bronze/20 m-6 pointer-events-none transition-all duration-700 group-hover:m-4"></div>
                     </div>
                 </div>
