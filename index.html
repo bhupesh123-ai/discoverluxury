@@ -6,7 +6,7 @@
     <title>DISCOVER LUXURY | Private Journeys</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -39,21 +39,27 @@
         .reveal-mask { clip-path: inset(0 100% 0 0); transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1); }
         .reveal-mask.active { clip-path: inset(0 0 0 0); }
 
-        /* Minimal Inputs */
+        /* Minimal Inputs - VISIBILITY UPGRADE */
         input, select {
             background: transparent !important;
             border: none !important;
-            border-bottom: 1px solid rgba(229, 229, 229, 0.2) !important;
+            border-bottom: 1px solid rgba(229, 229, 229, 0.5) !important;
             padding: 1.5rem 0 !important;
-            font-weight: 200;
+            font-weight: 500;
             transition: border-color 0.5s ease;
             color: #E5E5E5;
+            font-size: 14px;
         }
         input:focus, select:focus { border-bottom-color: #B89564 !important; outline: none; }
-        select option { background-color: #030303; color: #E5E5E5; }
+        select option { background-color: #030303; color: #E5E5E5; font-weight: 500; }
+        input::placeholder { color: rgba(229, 229, 229, 0.7); }
 
         .image-parallax { transform: scale(1.2); transition: transform 2s cubic-bezier(0, 0.55, 0.45, 1); }
         
+        /* Filter Buttons - Brighter Baseline */
+        .filter-btn { color: rgba(229, 229, 229, 0.8) !important; font-weight: 500 !important; }
+        .filter-btn.active { color: #B89564 !important; border-color: #B89564 !important; }
+
         /* Custom Cursor */
         .cursor-dot { width: 6px; height: 6px; background: #B89564; position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; }
         .cursor-outline { width: 40px; height: 40px; border: 1px solid rgba(184, 149, 100, 0.3); position: fixed; border-radius: 50%; pointer-events: none; z-index: 9998; transition: transform 0.15s ease-out; }
@@ -66,11 +72,11 @@
 
     <nav class="fixed top-0 w-full z-50 px-8 py-10 flex justify-between items-center mix-blend-difference">
         <a href="/" class="group flex flex-col">
-            <span class="font-serif text-2xl md:text-3xl tracking-[0.3em] uppercase text-ivory group-hover:text-bronze transition-colors duration-700">Discover Luxury</span>
-            <span class="text-[7px] tracking-[0.5em] uppercase text-ivory/50 mt-2 ml-1">Private Office</span>
+            <span class="font-serif font-medium text-2xl md:text-3xl tracking-[0.3em] uppercase text-ivory group-hover:text-bronze transition-colors duration-700">Discover Luxury</span>
+            <span class="text-[10px] tracking-[0.5em] font-semibold uppercase text-ivory/80 mt-2 ml-1">Private Office</span>
         </a>
         <div class="flex items-center gap-12">
-            <a href="#inquiry" class="hidden md:block text-[10px] kerning-extra uppercase font-light border-b border-bronze/40 pb-1 hover:border-bronze transition-all">Begin a Conversation</a>
+            <a href="#inquiry" class="hidden md:block text-[12px] kerning-extra uppercase font-semibold border-b border-bronze/60 pb-1 hover:border-bronze transition-all text-ivory/90">Begin a Conversation</a>
             <div class="w-10 h-px bg-ivory/60"></div>
         </div>
     </nav>
@@ -86,15 +92,15 @@
                 The Unseen <br> <span class="md:ml-32">World</span>
             </h1>
             
-            <p class="text-ivory/70 font-light tracking-widest kerning-extra uppercase text-[9px] md:text-xs max-w-lg mx-auto mb-16 opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.2s;">
-                Architecting private journeys across Antarctica, Africa, and beyond.
+            <p class="text-ivory/90 font-medium tracking-[0.3em] uppercase text-[11px] md:text-sm max-w-2xl mx-auto mb-16 opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.2s;">
+                Curating off-the-grid private journeys across Antarctica, Africa, and beyond.
             </p>
 
             <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 opacity-0 translate-y-10 reveal-item" style="transition-delay: 0.4s;">
-                <a href="#inquiry" class="border border-bronze/50 hover:border-bronze px-10 py-4 text-[9px] kerning-extra uppercase tracking-widest transition-all hover:bg-bronze/10 text-ivory">
+                <a href="#inquiry" class="border border-bronze/50 hover:border-bronze px-10 py-4 text-[11px] font-medium kerning-extra uppercase tracking-widest transition-all hover:bg-bronze/10 text-ivory">
                     Request Private Itinerary
                 </a>
-                <a href="#experiences" class="text-[9px] kerning-extra uppercase font-light opacity-60 hover:opacity-100 transition-opacity flex items-center gap-4 group">
+                <a href="#experiences" class="text-[11px] kerning-extra uppercase font-medium opacity-80 hover:opacity-100 transition-opacity flex items-center gap-4 group">
                     Explore Collection 
                     <span class="text-bronze transform group-hover:translate-y-1 transition-transform">↓</span>
                 </a>
@@ -105,12 +111,12 @@
     <section class="py-40 px-8 md:px-24 bg-obsidian border-b border-ivory/5">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
             <div class="reveal-mask">
-                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000" alt="Detail" class="w-full h-[700px] object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=2000" alt="Private Reserve" class="w-full h-[700px] object-cover grayscale hover:grayscale-0 transition-all duration-1000">
             </div>
             <div class="space-y-12">
                 <h2 class="font-serif text-4xl md:text-6xl italic leading-tight">"Luxury is not a destination, but a state of absolute privacy."</h2>
                 <div class="w-20 h-px bg-bronze"></div>
-                <p class="text-ivory/50 font-light leading-loose max-w-md">
+                <p class="text-ivory/90 font-medium leading-[1.9] max-w-md">
                     We architect journeys for the few who have seen it all. Our role is to provide the invisible threads that connect rare access, absolute security, and profound cultural immersion.
                 </p>
             </div>
@@ -121,21 +127,21 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
                 <div class="lg:col-span-6 space-y-10 reveal-item opacity-0 translate-y-10">
-                    <span class="text-[9px] kerning-extra uppercase text-bronze tracking-widest block">The Pedigree</span>
+                    <span class="text-[9px] kerning-extra uppercase text-bronze tracking-widest block font-medium">The Pedigree</span>
                     <h2 class="font-serif text-5xl italic leading-tight text-ivory">Discretion, Access, and Diplomatic Trust.</h2>
                     <div class="w-12 h-px bg-bronze"></div>
                     <div class="space-y-6">
-                        <p class="text-ivory/60 font-light leading-loose text-sm">
+                        <p class="text-ivory/90 font-medium leading-[1.9] text-sm">
                             Discover Luxury operates as the private, high-net-worth curation arm of Pristine Vacations. Founded by Bhupesh, our mandate is simple: to engineer travel experiences that exist entirely off the grid.
                         </p>
-                        <p class="text-ivory/60 font-light leading-loose text-sm">
+                        <p class="text-ivory/90 font-medium leading-[1.9] text-sm">
                             True luxury requires unimpeachable logistics. Operating as an officially authorized agent for multiple global embassies and diplomatic missions, our operational foundation is built on diplomatic-level scrutiny, absolute security, and seamless global access. 
                         </p>
                     </div>
                 </div>
                 <div class="lg:col-span-6 reveal-mask">
                     <div class="relative h-[600px] overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000" alt="Global Access" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2000" alt="Global Access" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
                         <div class="absolute inset-0 border border-bronze/20 m-6 pointer-events-none transition-all duration-700 group-hover:m-4"></div>
                     </div>
                 </div>
@@ -145,8 +151,8 @@
 
     <section id="experiences" class="py-40 px-8">
         <div class="container mx-auto">
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-24 text-[10px] kerning-extra uppercase tracking-widest text-ivory/50">
-                <button class="filter-btn text-bronze border-b border-bronze pb-1 transition-all" data-filter="All">All</button>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-24 text-[11px] kerning-extra uppercase tracking-widest text-ivory/80">
+                <button class="filter-btn active border-b border-bronze pb-1 transition-all" data-filter="All">All</button>
                 <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Polar">Polar</button>
                 <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Safari">Safari</button>
                 <button class="filter-btn hover:text-ivory transition-all pb-1 border-b border-transparent" data-filter="Islands">Islands</button>
@@ -160,29 +166,29 @@
         <div class="container mx-auto px-8 max-w-6xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
                 <div class="lg:col-span-5 reveal-item opacity-0 translate-y-10">
-                    <span class="text-[9px] kerning-extra uppercase opacity-40 mb-10 block">The Founder's Promise</span>
+                    <span class="text-[10px] font-medium kerning-extra uppercase opacity-60 mb-10 block">The Founder's Promise</span>
                     <h2 class="font-serif text-6xl md:text-7xl italic leading-tight mb-10">Personally <br>Curated by <br>Bhupesh.</h2>
-                    <p class="text-sm font-light leading-relaxed opacity-80 mb-8 max-w-md">"I believe true luxury has shifted from 'seeing' to 'feeling'. It is no longer about the gilded lobby, but the private entrance. Every journey we design is an original piece of architecture, built entirely around your rhythm."</p>
+                    <p class="text-sm font-medium leading-relaxed opacity-90 mb-8 max-w-md text-obsidian/90">"I believe true luxury has shifted from 'seeing' to 'feeling'. It is no longer about the gilded lobby, but the private entrance. Every journey we design is an original piece of architecture, built entirely around your rhythm."</p>
                     <div class="w-12 h-px bg-obsidian/20"></div>
                 </div>
                 <div class="lg:col-span-7 lg:pl-16 reveal-item opacity-0 translate-y-10" style="transition-delay: 0.2s;">
-                    <h3 class="text-[10px] kerning-extra uppercase tracking-widest opacity-40 mb-16">Why Discerning Travelers Choose Us</h3>
+                    <h3 class="text-[11px] font-medium kerning-extra uppercase tracking-widest opacity-60 mb-16">Why Discerning Travelers Choose Us</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                         <div class="border-l border-obsidian/10 pl-8">
                             <h4 class="font-serif text-2xl italic mb-4">Private Access</h4>
-                            <p class="text-xs font-light opacity-60 leading-relaxed">We bypass the public sphere. Expect after-hours access to landmarks, private museum viewings, and entry to off-market estates.</p>
+                            <p class="text-[13px] font-medium text-obsidian/80 leading-[1.9]">We bypass the public sphere. Expect after-hours access to landmarks, private museum viewings, and entry to off-market estates.</p>
                         </div>
                         <div class="border-l border-obsidian/10 pl-8">
                             <h4 class="font-serif text-2xl italic mb-4">Bespoke Planning</h4>
-                            <p class="text-xs font-light opacity-60 leading-relaxed">No templates. No packaged tours. Every itinerary is engineered from a blank canvas to match your specific cadence and tastes.</p>
+                            <p class="text-[13px] font-medium text-obsidian/80 leading-[1.9]">No templates. No packaged tours. Every itinerary is engineered from a blank canvas to match your specific cadence and tastes.</p>
                         </div>
                         <div class="border-l border-obsidian/10 pl-8">
                             <h4 class="font-serif text-2xl italic mb-4">Global Network</h4>
-                            <p class="text-xs font-light opacity-60 leading-relaxed">Leveraging our diplomatic-level status to connect you with elite local fixers, royalty, and world-class naturalists.</p>
+                            <p class="text-[13px] font-medium text-obsidian/80 leading-[1.9]">Leveraging our diplomatic-level status to connect you with elite local fixers, royalty, and world-class naturalists.</p>
                         </div>
                         <div class="border-l border-obsidian/10 pl-8">
                             <h4 class="font-serif text-2xl italic mb-4">End-to-End Concierge</h4>
-                            <p class="text-xs font-light opacity-60 leading-relaxed">From tarmac VIP greetings to securing impossible dinner reservations, your journey is entirely frictionless from departure to return.</p>
+                            <p class="text-[13px] font-medium text-obsidian/80 leading-[1.9]">From tarmac VIP greetings to securing impossible dinner reservations, your journey is entirely frictionless from departure to return.</p>
                         </div>
                     </div>
                 </div>
@@ -193,8 +199,8 @@
     <section id="inquiry" class="py-40 px-8 bg-obsidian border-t border-ivory/5">
         <div class="max-w-4xl mx-auto">
             <div class="mb-24 text-center">
-                <h2 class="font-serif text-5xl italic mb-6">Begin the Conversation</h2>
-                <p class="text-[10px] kerning-extra uppercase text-bronze">Strictly Private & Confidential</p>
+                <h2 class="font-serif text-5xl italic mb-6 text-ivory">Begin the Conversation</h2>
+                <p class="text-[11px] font-medium kerning-extra uppercase text-bronze">Strictly Private & Confidential</p>
             </div>
             
             <div id="form-container" class="relative">
@@ -203,7 +209,7 @@
                     <input type="email" name="Client_Email" placeholder="EMAIL ADDRESS" required>
                     
                     <input type="tel" name="Client_Phone" placeholder="CONTACT NUMBER" required>
-                    <select name="Destination_Interest" class="text-[10px] kerning-extra uppercase" required>
+                    <select name="Destination_Interest" class="text-[11px] font-medium kerning-extra uppercase" required>
                         <option disabled selected value="">DESTINATION INTEREST</option>
                         <option value="Polar">POLAR EXPEDITIONS</option>
                         <option value="Safari">AFRICAN SAFARIS</option>
@@ -213,7 +219,7 @@
                     </select>
                     
                     <input type="text" name="Travel_Dates" placeholder="EXPECTED TRAVEL DATES" class="w-full">
-                    <select name="Anticipated_Investment" class="text-[10px] kerning-extra uppercase" required>
+                    <select name="Anticipated_Investment" class="text-[11px] font-medium kerning-extra uppercase" required>
                         <option disabled selected value="">ANTICIPATED INVESTMENT</option>
                         <option value="5L_10L">₹5L – ₹10L</option>
                         <option value="10L_25L">₹10L – ₹25L</option>
@@ -222,7 +228,7 @@
                     
                     <div class="md:col-span-2 flex justify-center mt-20">
                         <button type="submit" id="submit-btn" class="group flex items-center gap-8 cursor-pointer">
-                            <span class="text-[10px] kerning-extra uppercase font-medium">Submit Inquiry</span>
+                            <span class="text-[11px] font-bold kerning-extra uppercase text-ivory">Submit Inquiry</span>
                             <div class="w-20 h-px bg-bronze group-hover:w-32 transition-all"></div>
                         </button>
                     </div>
@@ -231,20 +237,21 @@
                 <div id="success-message" class="hidden absolute inset-0 flex flex-col items-center justify-center text-center opacity-0">
                     <h3 class="font-serif text-4xl italic text-ivory mb-6">Your inquiry has been received.</h3>
                     <div class="w-12 h-px bg-bronze mb-6"></div>
-                    <p class="text-ivory/50 font-light leading-relaxed max-w-md mx-auto">A curator from our private office will contact you shortly to begin designing your bespoke experience.</p>
+                    <p class="text-ivory/90 font-medium leading-[1.9] max-w-md mx-auto">A curator from our private office will contact you shortly to begin designing your bespoke experience.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="py-20 px-8 border-t border-ivory/5 flex flex-col md:flex-row justify-between items-center gap-12 bg-obsidian">
-        <div class="font-serif text-lg italic opacity-40">Discover Luxury</div>
-        <div class="flex gap-12 text-[9px] kerning-extra uppercase opacity-40">
-            <a href="#" class="hover:text-bronze transition-colors">Instagram</a>
+        <div class="font-serif text-lg italic opacity-60">Discover Luxury</div>
+        <div class="flex gap-12 text-[10px] font-medium kerning-extra uppercase opacity-70">
+            <a href="https://www.instagram.com/discoverluxury.in" target="_blank" rel="noopener noreferrer" class="hover:text-bronze transition-colors">Instagram</a>
+            
             <a href="https://wa.me/919876003384?text=Hello%20Discover%20Luxury.%20I%20would%20like%20to%20discuss%20curating%20a%20private%20journey." target="_blank" rel="noopener noreferrer" class="hover:text-bronze transition-colors">WhatsApp Concierge</a>
             <a href="#" class="hover:text-bronze transition-colors">Privacy</a>
         </div>
-        <div class="text-[9px] kerning-extra uppercase opacity-30">© 2024 Discover Luxury</div>
+        <div class="text-[10px] font-medium kerning-extra uppercase opacity-50">© 2026 Discover Luxury</div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -325,9 +332,9 @@
                                 <img src="${trip.ImageURL}" class="image-parallax w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
                             </div>
                             <div class="mt-8">
-                                <span class="text-[9px] kerning-extra text-bronze uppercase">${trip.Category}</span>
-                                <h3 class="font-serif text-3xl italic mt-2 text-ivory">${trip.Title}</h3>
-                                <p class="text-xs text-ivory/50 mt-4 font-light leading-relaxed max-w-md">${trip.Description}</p>
+                                <span class="text-[10px] kerning-extra text-bronze uppercase font-semibold">${trip.Category}</span>
+                                <h3 class="font-serif text-3xl italic mt-2 text-ivory/90">${trip.Title}</h3>
+                                <p class="text-[13px] md:text-sm text-white/90 mt-4 font-medium leading-[1.9] max-w-md">${trip.Description}</p>
                             </div>
                         </div>
                     `;
@@ -345,10 +352,10 @@
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 document.querySelectorAll('.filter-btn').forEach(b => {
-                    b.classList.remove('text-bronze', 'border-bronze');
+                    b.classList.remove('active', 'border-bronze');
                     b.classList.add('border-transparent');
                 });
-                e.target.classList.add('text-bronze', 'border-bronze');
+                e.target.classList.add('active', 'border-bronze');
                 e.target.classList.remove('border-transparent');
                 renderCards(e.target.getAttribute('data-filter'));
             });
