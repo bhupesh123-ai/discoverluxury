@@ -1,1424 +1,646 @@
+<!doctype html>
+<html lang="en">
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>
-Discover Luxury | ILTM Asia Singapore
-</title>
-
-<meta name="description"
-content="Meet Bhupesh Kumar, Founder of Discover Luxury, during ILTM Asia Singapore. Private Travel Office specialising in bespoke luxury journeys.">
-
-<meta name="theme-color"
-content="#050505">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&display=swap"
-rel="stylesheet">
-
-<style>
-
-:root{
-
---black:#050505;
-
---surface:#0D0D0D;
-
---gold:#C9A96E;
-
---gold-soft:#D9BC85;
-
---text:#F5F5F3;
-
---muted:#8F8F8F;
-
---border:rgba(201,169,110,.18);
-
-}
-
-*{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-}
-
-html{
-
-scroll-behavior:smooth;
-
-}
-<a
-
-href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I'd%20like%20to%20meet%20during%20ILTM%20Asia."
-
-target="_blank"
-
-class="floating-whatsapp">
-
-✆
-
-</a>
-.floating-whatsapp{
-
-position:fixed;
-
-bottom:30px;
-
-right:30px;
-
-width:64px;
-
-height:64px;
-
-border-radius:50%;
-
-background:#C9A96E;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:26px;
-
-text-decoration:none;
-
-color:black;
-
-box-shadow:
-
-0 12px 40px rgba(0,0,0,.35);
-
-z-index:999;
-
-transition:.35s;
-
-}
-
-.floating-whatsapp:hover{
-
-transform:scale(1.08);
-
-}
-body{
-
-background:var(--black);
-
-color:var(--text);
-
-font-family:'Inter',sans-serif;
-
-font-weight:300;
-
-line-height:1.8;
-
-overflow-x:hidden;
-
--webkit-font-smoothing:antialiased;
-
-}
-
-::selection{
-
-background:var(--gold);
-
-color:black;
-
-}
-
-.container{
-
-width:min(1180px,92%);
-
-margin:auto;
-
-}
-
-section{
-
-padding:130px 0;
-
-}
-
-h1{
-
-font-family:'Playfair Display',serif;
-
-font-weight:500;
-
-font-size:clamp(64px,10vw,130px);
-
-line-height:.95;
-
-letter-spacing:-2px;
-
-}
-
-h2{
-
-font-family:'Playfair Display',serif;
-
-font-size:48px;
-
-font-weight:500;
-
-margin-bottom:18px;
-
-}
-
-h3{
-
-font-family:'Playfair Display',serif;
-
-font-size:24px;
-
-font-weight:500;
-
-}
-
-p{
-
-color:var(--muted);
-
-font-size:18px;
-
-max-width:760px;
-
-}
-
-.gold{
-
-color:var(--gold);
-
-}
-
-.small{
-
-font-size:12px;
-
-letter-spacing:4px;
-
-text-transform:uppercase;
-
-color:var(--gold);
-
-}
-
-.divider{
-
-width:70px;
-
-height:1px;
-
-background:var(--gold);
-
-margin:50px auto;
-
-opacity:.45;
-
-}
-
-.card{
-
-background:rgba(255,255,255,.02);
-
-border:1px solid var(--border);
-
-backdrop-filter:blur(18px);
-
-padding:48px;
-
-transition:.35s;
-
-}
-
-.card:hover{
-
-border-color:var(--gold);
-
-transform:translateY(-6px);
-
-}
-
-.btn{
-
-display:inline-block;
-
-padding:18px 42px;
-
-border:1px solid var(--gold);
-
-color:var(--gold);
-
-text-decoration:none;
-
-font-size:12px;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
-
-transition:.35s;
-
-}
-
-.btn:hover{
-
-background:var(--gold);
-
-color:black;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-
-gap:24px;
-
-}
-
-.fade{
-
-opacity:0;
-
-transform:translateY(40px);
-
-transition:1s;
-
-}
-
-.fade.show{
-
-opacity:1;
-
-transform:none;
-
-}
-
-@media(max-width:768px){
-
-section{
-
-padding:90px 0;
-
-}
-
-h1{
-
-font-size:64px;
-
-}
-
-h2{
-
-font-size:36px;
-
-}
-
-p{
-
-font-size:17px;
-
-}
-
-.card{
-
-padding:32px;
-
-}
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Luxury | ILTM Asia Singapore</title>
+  <meta name="description" content="Meet Bhupesh Kumar, Founder of Discover Luxury, during ILTM Asia Singapore. Private Travel Office specialising in bespoke luxury journeys.">
+  <meta name="theme-color" content="#050505">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #050505;
+      --surface: #0d0d0d;
+      --gold: #c9a96e;
+      --gold-soft: #d9bc85;
+      --text: #f5f5f3;
+      --muted: #9a9a9a;
+      --border: rgba(201, 169, 110, .18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(201, 169, 110, .09), transparent 30%),
+        linear-gradient(180deg, #050505 0%, #0a0a0a 48%, #050505 100%);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: #000;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      padding: 50px 0 40px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: #fff;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(28px, 5vw, 38px);
+      letter-spacing: .22em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .event-meta {
+      text-align: right;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+    }
+
+    .muted-small {
+      margin-top: 8px;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .top-line {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201, 169, 110, .45), transparent);
+    }
+
+    section {
+      padding: 120px 0;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(62px, 10vw, 130px);
+      line-height: .95;
+    }
+
+    h2 {
+      margin-top: 18px;
+      margin-bottom: 18px;
+      font-size: clamp(36px, 5vw, 50px);
+      line-height: 1.12;
+    }
+
+    h3 {
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .divider {
+      width: 70px;
+      height: 1px;
+      margin: 50px auto;
+      background: var(--gold);
+      opacity: .45;
+    }
+
+    .intro-copy {
+      margin: 0 auto;
+      font-size: 20px;
+      line-height: 1.9;
+    }
+
+    .appointment-note {
+      margin: 28px auto 0;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 55px;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 38px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: transform .35s ease, background .35s ease, color .35s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-3px);
+      background: var(--gold);
+      color: #000;
+      outline: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, .025);
+      padding: 46px;
+      backdrop-filter: blur(18px);
+      transition: transform .35s ease, border-color .35s ease, background .35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, .035);
+    }
+
+    .stat-card {
+      text-align: center;
+    }
+
+    .stat-card p,
+    .card p {
+      margin-top: 18px;
+      font-size: 15px;
+    }
+
+    .section-head {
+      text-align: center;
+    }
+
+    .section-head p {
+      margin: 30px auto 0;
+      text-align: center;
+    }
+
+    .founder-layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 70px;
+      align-items: center;
+      margin-top: 70px;
+    }
+
+    .portrait-wrap {
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, .55);
+      filter: brightness(.97) contrast(1.05);
+      transition: transform .4s ease, box-shadow .35s ease;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.03);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .55);
+    }
+
+    .founder-title {
+      margin-bottom: 20px;
+      font-size: 34px;
+    }
+
+    .founder-copy p + p {
+      margin-top: 22px;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    .contact-row a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding: 120px 0 60px;
+      border-top: 1px solid rgba(201, 169, 110, .12);
+      text-align: center;
+    }
+
+    .footer-brand {
+      color: #fff;
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .footer-copy {
+      margin: 25px auto 0;
+      max-width: 620px;
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .copyright {
+      margin-top: 80px;
+      padding-top: 35px;
+      border-top: 1px solid rgba(255, 255, 255, .05);
+    }
+
+    .copyright p {
+      margin: 0 auto;
+      color: #666;
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .copyright p + p {
+      margin-top: 18px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .22em;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      z-index: 999;
+      display: flex;
+      width: 64px;
+      height: 64px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      line-height: 1;
+      text-decoration: none;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, .35);
+      transition: transform .35s ease;
+    }
+
+    .floating-whatsapp:hover,
+    .floating-whatsapp:focus-visible {
+      transform: scale(1.08);
+      outline: none;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(45px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+
+    @media (max-width: 820px) {
+      section {
+        padding: 90px 0;
+      }
+
+      .site-header {
+        padding-top: 34px;
+      }
+
+      .header-inner,
+      .event-meta {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .brand,
+      .footer-brand {
+        letter-spacing: .14em;
+      }
+
+      h1 {
+        font-size: 64px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+
+      .card {
+        padding: 32px;
+      }
+
+      .founder-layout {
+        grid-template-columns: 1fr;
+        gap: 44px;
+        text-align: center;
+      }
+
+      .founder-copy p {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .actions {
+        margin-top: 42px;
+      }
+
+      .btn {
+        width: min(100%, 300px);
+      }
+
+      .floating-whatsapp {
+        right: 18px;
+        bottom: 18px;
+        width: 56px;
+        height: 56px;
+      }
+    }
+  </style>
 </head>
+<body>
+  <a class="floating-whatsapp" href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I%27d%20like%20to%20meet%20during%20ILTM%20Asia." target="_blank" rel="noopener" aria-label="Contact Bhupesh Kumar on WhatsApp">WA</a>
 
-<header class="container" style="padding:50px 0 40px;">
+  <header class="site-header container">
+    <div class="header-inner">
+      <div>
+        <div class="brand">Discover Luxury</div>
+        <div class="eyebrow" style="margin-top:12px;">Private Travel Office</div>
+      </div>
+      <div class="event-meta">
+        <div class="eyebrow">ILTM Asia 2026</div>
+        <div class="muted-small">Singapore</div>
+      </div>
+    </div>
+  </header>
 
-    <div style="
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        flex-wrap:wrap;
-        gap:25px;">
+  <div class="container">
+    <div class="top-line" aria-hidden="true"></div>
+  </div>
 
-        <!-- LEFT -->
+  <main>
+    <section class="hero container">
+      <div class="fade">
+        <div class="eyebrow" style="margin-bottom:25px;">Curating Extraordinary Journeys</div>
+        <h1>Discover<br>Beyond Luxury</h1>
+        <div class="divider" aria-hidden="true"></div>
+        <p class="intro-copy">Discover Luxury is a private travel curator creating highly personalised journeys for discerning Indian travellers through carefully selected global partners.</p>
+        <p class="appointment-note">By Appointment During ILTM Asia &bull; Singapore</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I%27d%20like%20to%20meet%20during%20ILTM%20Asia." target="_blank" rel="noopener">Schedule Meeting</a>
+          <a class="btn" href="mailto:bhupesh@discoverluxury.in">Email</a>
+        </div>
+      </div>
+    </section>
 
+    <section class="container" style="padding-top:10px;padding-bottom:40px;">
+      <div class="grid">
+        <div class="card stat-card">
+          <h3 class="gold">25+</h3>
+          <p style="margin:auto;font-size:15px;">Years in International Travel</p>
+        </div>
+        <div class="card stat-card">
+          <h3 class="gold">Private</h3>
+          <p style="margin:auto;font-size:15px;">Curated Luxury Journeys</p>
+        </div>
+        <div class="card stat-card">
+          <h3 class="gold">Worldwide</h3>
+          <p style="margin:auto;font-size:15px;">Luxury Partnerships</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container fade">
+      <div class="section-head">
+        <div class="eyebrow">Founder</div>
+        <h2>Bhupesh Kumar</h2>
+        <p class="appointment-note">Founder &bull; Discover Luxury</p>
+      </div>
+      <div class="founder-layout">
+        <div class="portrait-wrap">
+          <img class="profile-photo" src="https://pristinevacations.com/photos/Bhupesh_pic1.JPG" alt="Bhupesh Kumar">
+          <p class="eyebrow" style="margin:28px auto 0;">By Appointment During ILTM Asia</p>
+        </div>
+        <div class="founder-copy">
+          <h3 class="founder-title">Founder <span class="gold">&bull; Discover Luxury</span></h3>
+          <p>For more than two decades, I have had the privilege of designing journeys for discerning Indian travellers seeking experiences beyond the ordinary.</p>
+          <p>Discover Luxury was created as a private travel office dedicated to thoughtful curation, trusted partnerships and exceptional service. Every itinerary is personally designed, and every destination partner is chosen with care.</p>
+          <p>If our philosophy resonates with yours, I would be delighted to meet during ILTM Asia and explore how we can create extraordinary journeys together.</p>
+          <div class="actions" style="justify-content:flex-start;margin-top:45px;">
+            <a class="btn" href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I%27d%20like%20to%20meet%20during%20ILTM%20Asia." target="_blank" rel="noopener">Schedule Meeting</a>
+            <a class="btn" href="mailto:bhupesh@discoverluxury.in">Email Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container fade">
+      <div class="section-head">
+        <div class="eyebrow">Partnerships</div>
+        <h2>Who We Love Working With</h2>
+        <p>We believe extraordinary journeys begin with exceptional partnerships. We seek long-term relationships with organisations that share our passion for authenticity, craftsmanship and personalised guest experiences.</p>
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3 class="gold">Luxury Hotels</h3>
+          <p>Independent luxury hotels and iconic hospitality experiences.</p>
+        </div>
+        <div class="card">
+          <h3 class="gold">Boutique Resorts</h3>
+          <p>Intimate properties offering exceptional service and character.</p>
+        </div>
+        <div class="card">
+          <h3 class="gold">Private Villas</h3>
+          <p>Curated villa collections for families and celebration travel.</p>
+        </div>
+        <div class="card">
+          <h3 class="gold">Safari Experiences</h3>
+          <p>Exclusive wildlife journeys with conservation-led partners.</p>
+        </div>
+        <div class="card">
+          <h3 class="gold">Expedition Voyages</h3>
+          <p>Polar expeditions and remote experiences for adventurous travellers.</p>
+        </div>
+        <div class="card">
+          <h3 class="gold">Destination Specialists</h3>
+          <p>Trusted local experts delivering authentic, seamless experiences.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container fade">
+      <div class="section-head">
+        <div class="eyebrow">Private Appointments</div>
+        <h2>Let's Meet in Singapore</h2>
+        <p>I would be delighted to meet with hotel partners, destination specialists and luxury travel providers during ILTM Asia to explore meaningful collaborations.</p>
+      </div>
+      <div class="grid" style="margin-top:70px;">
+        <div class="card stat-card">
+          <div style="font-size:34px;color:#c9a96e;margin-bottom:18px;" aria-hidden="true">01</div>
+          <h3>Schedule</h3>
+          <p>Arrange a private appointment during ILTM Asia.</p>
+          <div style="margin-top:35px;">
+            <a class="btn" href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I%27d%20like%20to%20schedule%20a%20meeting%20during%20ILTM%20Asia." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="card stat-card">
+          <div style="font-size:34px;color:#c9a96e;margin-bottom:18px;" aria-hidden="true">@</div>
+          <h3>Email</h3>
+          <p>Share your product portfolio or introduce your destination.</p>
+          <div style="margin-top:35px;">
+            <a class="btn" href="mailto:bhupesh@discoverluxury.in?subject=ILTM%20Asia%20Meeting">Email Me</a>
+          </div>
+        </div>
+        <div class="card stat-card">
+          <div style="font-size:34px;color:#c9a96e;margin-bottom:18px;" aria-hidden="true">DL</div>
+          <h3>Discover Luxury</h3>
+          <p>Learn more about our philosophy and curated journeys.</p>
+          <div style="margin-top:35px;">
+            <a class="btn" href="https://discoverluxury.in" target="_blank" rel="noopener">Visit Website</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:90px;text-align:center;">
+        <div class="divider" aria-hidden="true"></div>
+        <p class="appointment-note">Available throughout ILTM Asia &bull; Singapore</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">Discover Luxury</div>
+      <p class="footer-copy">Private Travel Curator creating extraordinary journeys through carefully selected global partnerships.</p>
+      <div class="divider" aria-hidden="true"></div>
+      <div class="contact-row">
         <div>
-
-            <div style="
-                font-family:'Playfair Display',serif;
-                font-size:32px;
-                letter-spacing:10px;
-                text-transform:uppercase;
-                color:white;">
-
-                Discover Luxury
-
-            </div>
-
-            <div class="small"
-                 style="margin-top:12px;">
-
-                PRIVATE TRAVEL OFFICE
-
-            </div>
-
+          <div class="eyebrow">Website</div>
+          <div style="margin-top:10px;"><a href="https://discoverluxury.in" target="_blank" rel="noopener">discoverluxury.in</a></div>
         </div>
-
-        <!-- RIGHT -->
-
-        <div style="
-            text-align:right;">
-
-            <div style="
-                font-size:12px;
-                letter-spacing:3px;
-                text-transform:uppercase;
-                color:#C9A96E;">
-
-                ILTM ASIA 2026
-
-            </div>
-
-            <div style="
-                color:#888;
-                font-size:14px;
-                margin-top:8px;">
-
-                Singapore
-
-            </div>
-
+        <div>
+          <div class="eyebrow">Email</div>
+          <div style="margin-top:10px;"><a href="mailto:bhupesh@discoverluxury.in">bhupesh@discoverluxury.in</a></div>
         </div>
-
+        <div>
+          <div class="eyebrow">WhatsApp</div>
+          <div style="margin-top:10px;"><a href="https://wa.me/919876003384" target="_blank" rel="noopener">+91 98760 03384</a></div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 Discover Luxury</p>
+        <p>By Appointment During ILTM Asia &bull; Singapore</p>
+      </div>
     </div>
-
-</header>
-<div class="container">
-
-    <div style="
-        width:100%;
-        height:1px;
-        background:linear-gradient(to right,
-        transparent,
-        rgba(201,169,110,.45),
-        transparent);">
-
-    </div>
-
-</div>
-<!-- ========================= -->
-<!-- HERO SECTION -->
-<!-- ========================= -->
-
-<section class="container" style="min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;">
-
-    <div class="fade">
-
-        <div class="small" style="margin-bottom:25px;">
-
-            CURATING EXTRAORDINARY JOURNEYS
-
-        </div>
-
-        <h1>
-
-            Discover<br>
-            Beyond Luxury
-
-        </h1>
-
-        <div class="divider"></div>
-
-        <p style="
-            max-width:760px;
-            margin:auto;
-            font-size:20px;
-            line-height:1.9;">
-
-            Discover Luxury is a private travel curator creating highly personalised journeys
-            for discerning Indian travellers through carefully selected global partners.
-
-        </p>
-
-        <p style="
-            margin-top:28px;
-            color:#C9A96E;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            font-size:13px;">
-
-            By Appointment During ILTM Asia • Singapore
-
-        </p>
-
-        <div style="
-            margin-top:55px;
-            display:flex;
-            justify-content:center;
-            gap:18px;
-            flex-wrap:wrap;">
-
-            <a
-               class="btn"
-               href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I'd%20like%20to%20meet%20during%20ILTM%20Asia."
-               target="_blank">
-
-                Schedule Meeting
-
-            </a>
-
-            <a
-               class="btn"
-               href="mailto:bhupesh@discoverluxury.in">
-
-                Email
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<section class="container" style="padding-top:10px;padding-bottom:40px;">
-
-<div class="grid">
-
-<div class="card" style="text-align:center;">
-
-<h3 class="gold">
-
-25+
-
-</h3>
-
-<p style="margin:auto;font-size:15px;">
-
-Years in International Travel
-
-</p>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3 class="gold">
-
-Private
-
-</h3>
-
-<p style="margin:auto;font-size:15px;">
-
-Curated Luxury Journeys
-
-</p>
-
-</div>
-
-<div class="card" style="text-align:center;">
-
-<h3 class="gold">
-
-Worldwide
-
-</h3>
-
-<p style="margin:auto;font-size:15px;">
-
-Luxury Partnerships
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- FOUNDER -->
-<!-- ========================================= -->
-
-<section class="container fade">
-
-<div style="text-align:center;">
-
-<div class="small">
-
-FOUNDER
-
-<div style="text-align:center;margin-bottom:40px;">
-
-<h3 style="
-font-family:'Playfair Display',serif;
-font-size:34px;
-font-weight:500;
-">
-
-Bhupesh Kumar
-
-</h3>
-
-<p class="gold"
-style="
-margin-top:10px;
-letter-spacing:3px;
-text-transform:uppercase;
-font-size:12px;
-">
-
-Founder • Discover Luxury
-
-</p>
-
-<p style="
-margin-top:18px;
-font-style:italic;
-color:#C9A96E;
-">
-
-By Appointment During ILTM Asia
-
-</p>
-
-</div>
-.profile-photo{
-
-transition:.4s ease;
-
-}
-
-.profile-photo:hover{
-
-transform:scale(1.03);
-
-}
-
-</div>
-<div style="
-display:flex;
-justify-content:center;
-margin:55px 0 45px;
-">
-
-<img
-src="https://pristinevacations.com/photos/Bhupesh_pic1.JPG"
-alt="Bhupesh Kumar"
-
-style="
-width:220px;
-height:220px;
-object-fit:cover;
-border-radius:50%;
-border:2px solid #C9A96E;
-box-shadow:0 25px 70px rgba(0,0,0,.45);
-filter:brightness(.96) contrast(1.05);
-transition:.4s;
-">
-
-</div>
-
-
-<div style="
-
-display:grid;
-
-grid-template-columns:320px 1fr;
-
-gap:70px;
-
-align-items:center;
-
-margin-top:70px;
-
-">
-
-<!-- Portrait -->
-
-<div style="text-align:center;">
-
-<img
-
-src="https://pristinevacations.com/photos/Bhupesh_pic1.JPG"
-
-alt="Bhupesh Kumar"
-
-style="
-
-width:220px;
-
-height:220px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:2px solid #C9A96E;
-
-box-shadow:0 25px 70px rgba(0,0,0,.55);
-
-filter:brightness(.97);
-
-">
-
-<p class="small"
-
-style="margin-top:28px;">
-
-BY APPOINTMENT DURING ILTM ASIA
-
-</p>
-
-</div>
-
-
-<!-- Text -->
-
-<div>
-
-<h3
-
-style="
-
-font-size:34px;
-
-margin-bottom:20px;
-
-">
-
-Founder
-
-<span class="gold">
-
-· Discover Luxury
-
-</span>
-
-</h3>
-
-
-<p>
-
-For more than two decades, I have had the privilege of designing journeys for discerning Indian travellers seeking experiences beyond the ordinary.
-
-</p>
-
-<br>
-
-<p>
-
-Discover Luxury was created as a private travel office dedicated to thoughtful curation, trusted partnerships and exceptional service. Every itinerary is personally designed, and every destination partner is chosen with care.
-
-</p>
-
-<br>
-
-<p>
-
-If our philosophy resonates with yours, I would be delighted to meet during ILTM Asia and explore how we can create extraordinary journeys together.
-
-</p>
-
-
-<div
-
-style="
-
-margin-top:45px;
-
-display:flex;
-
-gap:16px;
-
-flex-wrap:wrap;
-
-">
-
-<a
-
-class="btn"
-
-href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I'd%20like%20to%20meet%20during%20ILTM%20Asia."
-
-target="_blank">
-
-Schedule Meeting
-
-</a>
-
-<a
-
-class="btn"
-
-href="mailto:bhupesh@discoverluxury.in">
-
-Email Me
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- PARTNERSHIP INTERESTS -->
-<!-- ========================================= -->
-
-<section class="container fade">
-
-    <div style="text-align:center;">
-
-        <div class="small">
-            PARTNERSHIPS
-        </div>
-
-        <h2 style="margin-top:18px;">
-            Who We Love Working With
-        </h2>
-
-        <p style="
-            max-width:720px;
-            margin:30px auto 0;
-            text-align:center;
-            color:#8F8F8F;">
-
-            We believe extraordinary journeys begin with exceptional partnerships.
-            We seek long-term relationships with organisations that share our passion
-            for authenticity, craftsmanship and personalised guest experiences.
-
-        </p>
-
-        <div class="divider"></div>
-
-    </div>
-
-
-    <div class="grid">
-
-
-        <div class="card">
-
-            <h3 class="gold">
-                Luxury Hotels
-            </h3>
-
-            <p style="margin-top:18px;">
-                Independent luxury hotels and iconic hospitality experiences.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3 class="gold">
-                Boutique Resorts
-            </h3>
-
-            <p style="margin-top:18px;">
-                Intimate properties offering exceptional service and character.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3 class="gold">
-                Private Villas
-            </h3>
-
-            <p style="margin-top:18px;">
-                Curated villa collections for families and celebration travel.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3 class="gold">
-                Safari Experiences
-            </h3>
-
-            <p style="margin-top:18px;">
-                Exclusive wildlife journeys with conservation-led partners.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3 class="gold">
-                Expedition Voyages
-            </h3>
-
-            <p style="margin-top:18px;">
-                Polar expeditions and remote experiences for adventurous travellers.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3 class="gold">
-                Destination Specialists
-            </h3>
-
-            <p style="margin-top:18px;">
-                Trusted local experts delivering authentic, seamless experiences.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-<!-- ========================================= -->
-<!-- PRIVATE MEETING -->
-<!-- ========================================= -->
-
-<section class="container fade">
-
-    <div style="text-align:center;">
-
-        <div class="small">
-
-            PRIVATE APPOINTMENTS
-
-        </div>
-
-        <h2 style="margin-top:18px;">
-
-            Let's Meet in Singapore
-
-        </h2>
-
-        <p style="
-            max-width:700px;
-            margin:28px auto 0;
-            text-align:center;">
-
-            I would be delighted to meet with hotel partners,
-            destination specialists and luxury travel providers
-            during ILTM Asia to explore meaningful collaborations.
-
-        </p>
-
-    </div>
-
-
-    <div style="margin-top:70px;">
-
-        <div class="grid">
-
-            <!-- Card 1 -->
-
-            <div class="card" style="text-align:center;">
-
-                <div style="
-                    font-size:44px;
-                    color:#C9A96E;
-                    margin-bottom:18px;">
-
-                    📅
-
-                </div>
-
-                <h3>
-
-                    Schedule
-
-                </h3>
-
-                <p style="margin-top:18px;">
-
-                    Arrange a private appointment during ILTM Asia.
-
-                </p>
-
-                <div style="margin-top:35px;">
-
-                    <a
-
-                    class="btn"
-
-                    target="_blank"
-
-                    href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I'd%20like%20to%20schedule%20a%20meeting%20during%20ILTM%20Asia.">
-
-                        WhatsApp
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Card 2 -->
-
-            <div class="card" style="text-align:center;">
-
-                <div style="
-                    font-size:44px;
-                    color:#C9A96E;
-                    margin-bottom:18px;">
-
-                    ✉️
-
-                </div>
-
-                <h3>
-
-                    Email
-
-                </h3>
-
-                <p style="margin-top:18px;">
-
-                    Share your product portfolio or introduce your destination.
-
-                </p>
-
-                <div style="margin-top:35px;">
-
-                    <a
-
-                    class="btn"
-
-                    href="mailto:bhupesh@discoverluxury.in?subject=ILTM Asia Meeting">
-
-                        Email Me
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Card 3 -->
-
-            <div class="card" style="text-align:center;">
-
-                <div style="
-                    font-size:44px;
-                    color:#C9A96E;
-                    margin-bottom:18px;">
-
-                    🌍
-
-                </div>
-
-                <h3>
-
-                    Discover Luxury
-
-                </h3>
-
-                <p style="margin-top:18px;">
-
-                    Learn more about our philosophy and curated journeys.
-
-                </p>
-
-                <div style="margin-top:35px;">
-
-                    <a
-
-                    class="btn"
-
-                    target="_blank"
-
-                    href="https://discoverluxury.in">
-
-                        Visit Website
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div style="
-        margin-top:90px;
-        text-align:center;">
-
-        <div class="divider"></div>
-
-        <p style="
-            color:#C9A96E;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            font-size:13px;">
-
-            Available throughout ILTM Asia • Singapore
-
-        </p>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
-
-<footer style="
-padding:120px 0 60px;
-margin-top:40px;
-border-top:1px solid rgba(201,169,110,.12);
-">
-
-<div class="container">
-
-<div style="text-align:center;">
-
-<div style="
-font-family:'Playfair Display',serif;
-font-size:34px;
-letter-spacing:8px;
-text-transform:uppercase;
-color:white;
-">
-
-Discover Luxury
-
-</div>
-
-<p style="
-margin:25px auto 0;
-max-width:620px;
-font-size:17px;
-line-height:1.9;
-">
-
-Private Travel Curator creating extraordinary journeys through carefully selected global partnerships.
-
-</p>
-
-<div class="divider"></div>
-
-<div style="
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:40px;
-margin-top:50px;
-font-size:14px;
-">
-
-<div>
-
-<div class="small">
-
-Website
-
-</div>
-
-<div style="margin-top:10px;">
-
-<a
-href="https://discoverluxury.in"
-target="_blank"
-style="color:white;text-decoration:none;">
-
-discoverluxury.in
-
-</a>
-
-</div>
-
-</div>
-
-
-<div>
-
-<div class="small">
-
-Email
-
-</div>
-
-<div style="margin-top:10px;">
-
-<a
-href="mailto:bhupesh@discoverluxury.in"
-style="color:white;text-decoration:none;">
-
-bhupesh@discoverluxury.in
-
-</a>
-
-</div>
-
-</div>
-
-
-<div>
-
-<div class="small">
-
-WhatsApp
-
-</div>
-
-<div style="margin-top:10px;">
-
-<a
-target="_blank"
-href="https://wa.me/919876003384"
-style="color:white;text-decoration:none;">
-
-+91 98760 03384
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div style="
-margin-top:80px;
-padding-top:35px;
-border-top:1px solid rgba(255,255,255,.05);
-">
-
-<p style="
-margin:auto;
-font-size:13px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#666;
-">
-
-© 2026 Discover Luxury
-
-</p>
-
-<p style="
-margin:18px auto 0;
-font-size:12px;
-letter-spacing:3px;
-text-transform:uppercase;
-color:#C9A96E;
-">
-
-By Appointment During ILTM Asia · Singapore
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</footer>
-
-<!-- ===================================================== -->
-<!-- PREMIUM INTERACTIONS -->
-<!-- ===================================================== -->
-
-<script>
-
-// =========================
-// Fade In Animation
-// =========================
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{
-threshold:0.15
-});
-
-document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
-
-
-
-// =========================
-// Smooth Button Hover
-// =========================
-
-document.querySelectorAll(".btn").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.transform="translateY(-3px)";
-
-});
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="translateY(0px)";
-
-});
-
-});
-
-
-
-// =========================
-// Portrait Animation
-// =========================
-
-const portrait=document.querySelector(".profile img");
-
-window.addEventListener("scroll",()=>{
-
-if(!portrait) return;
-
-let y=window.scrollY*0.04;
-
-portrait.style.transform=`translateY(${y}px)`;
-
-});
-
-</script>
-
-/* =================================== */
-/* PREMIUM ANIMATIONS */
-/* =================================== */
-
-.fade{
-
-opacity:0;
-
-transform:translateY(45px);
-
-transition:
-
-opacity 1s ease,
-
-transform 1s ease;
-
-}
-
-.fade.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-
-.btn{
-
-transition:
-
-all .35s ease;
-
-}
-
-
-
-.profile img{
-
-transition:
-
-transform .25s ease,
-
-box-shadow .35s ease;
-
-}
-
-
-
-.profile img:hover{
-
-transform:scale(1.03);
-
-box-shadow:
-
-0 30px 80px rgba(0,0,0,.55);
-
-}
-
-
-
-.card{
-
-transition:
-
-transform .35s ease,
-
-border-color .35s ease,
-
-background .35s ease;
-
-}
-
-
-
-.card:hover{
-
-background:
-
-rgba(255,255,255,.025);
-
-}
-
-
-
-h2{
-
-transition:.35s;
-
-}
-
-
-
-section:hover h2{
-
-color:#ffffff;
-
-}
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".fade").forEach((el) => observer.observe(el));
+
+    const portrait = document.querySelector(".profile-photo");
+    window.addEventListener("scroll", () => {
+      if (!portrait || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const y = Math.min(window.scrollY * 0.025, 16);
+      portrait.style.translate = `0 ${y}px`;
+    }, { passive: true });
+  </script>
+</body>
+</html>
