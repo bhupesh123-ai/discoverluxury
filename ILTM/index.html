@@ -1,220 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Discover Luxury | ILTM Asia 2026</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+<title>Discover Luxury | ILTM Asia</title>
+<!-- Importing refined fonts for a luxury editorial feel -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --bg-black: #030303;
+    --gold: #C9A96E;
+    --text-light: #EAEAEA;
+    --text-muted: #888888;
+  }
+  
+  * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+  
+  body {
+    background-color: var(--bg-black);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .container { 
+    max-width: 1000px; 
+    margin: auto; 
+    padding: 60px 24px; 
+  }
+  
+  header { 
+    text-align: center; 
+    margin-bottom: 90px; 
+  }
+  
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-left: 12px; /* Offsets the letter-spacing for true center */
+  }
+  
+  .sub {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 12px;
+    margin-left: 6px;
+  }
+  
+  .hero { 
+    text-align: center; 
+    padding: 20px 0 60px; 
+  }
+  
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 9vw, 110px);
+    line-height: 1.05;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .hero p {
+    max-width: 620px;
+    margin: 40px auto;
+    color: var(--text-muted);
+    font-size: 18px;
+  }
+  
+  .gold-text { 
+    color: var(--gold); 
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(201, 169, 110, 0.15);
+    padding: 50px 40px;
+    text-align: center;
+    transition: border 0.4s ease;
+  }
+  
+  .card:hover { 
+    border: 1px solid rgba(201, 169, 110, 0.4); 
+  }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:#050505;
-color:#E8D4B0;
-font-family:'Inter',sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:30px;
-}
-
-.container{
-width:100%;
-max-width:760px;
-text-align:center;
-}
-
-.small{
-font-size:13px;
-letter-spacing:5px;
-text-transform:uppercase;
-color:#9b9b9b;
-margin-bottom:18px;
-}
-
-h1{
-font-family:'Cormorant Garamond',serif;
-font-size:72px;
-font-weight:500;
-line-height:1;
-margin-bottom:20px;
-}
-
-.gold{
-color:#C8A46B;
-}
-
-.subtitle{
-font-size:24px;
-font-family:'Cormorant Garamond',serif;
-color:#d6d6d6;
-margin-bottom:40px;
-}
-
-.line{
-width:90px;
-height:1px;
-background:#7d6844;
-margin:40px auto;
-}
-
-p{
-font-size:18px;
-line-height:1.9;
-color:#d5d5d5;
-max-width:620px;
-margin:auto;
-}
-
-.card{
-border:1px solid rgba(200,164,107,.35);
-padding:35px;
-margin-top:45px;
-border-radius:14px;
-background:#0b0b0b;
-}
-
-.name{
-font-family:'Cormorant Garamond',serif;
-font-size:40px;
-margin-bottom:8px;
-}
-
-.role{
-color:#b8b8b8;
-margin-bottom:28px;
-font-size:15px;
-letter-spacing:2px;
-text-transform:uppercase;
-}
-
-.button{
-display:inline-block;
-margin:10px;
-padding:15px 34px;
-border:1px solid #C8A46B;
-color:#C8A46B;
-text-decoration:none;
-border-radius:40px;
-transition:.3s;
-font-size:15px;
-}
-
-.button:hover{
-background:#C8A46B;
-color:#000;
-}
-
-.footer{
-margin-top:60px;
-font-size:13px;
-color:#777;
-line-height:1.8;
-}
-
-@media(max-width:700px){
-
-h1{
-font-size:48px;
-}
-
-.subtitle{
-font-size:18px;
-}
-
-p{
-font-size:16px;
-}
-
-.name{
-font-size:32px;
-}
-
-.button{
-display:block;
-margin:12px auto;
-width:260px;
-}
-
-}
-
+  /* Thin-line grid layout for partnership interests */
+  .grid-wrapper {
+    background: rgba(201, 169, 110, 0.15);
+    border: 1px solid rgba(201, 169, 110, 0.15);
+    padding: 1px;
+    margin-top: 40px;
+  }
+  
+  .grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 1px; 
+  }
+  
+  .grid-item { 
+    background: var(--bg-black); 
+    padding: 35px 20px; 
+    text-align: center; 
+    font-size: 13px; 
+    letter-spacing: 1.5px; 
+    text-transform: uppercase; 
+    color: var(--text-light);
+    transition: color 0.3s ease;
+  }
+  
+  .grid-item:hover {
+    color: var(--gold);
+  }
+  
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .btns { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 24px; 
+    justify-content: center; 
+    margin-top: 45px; 
+  }
+  
+  .btn {
+    text-decoration: none;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 16px 40px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    background: transparent;
+  }
+  
+  .btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--bg-black);
+  }
+  
+  .btn-primary {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  
+  footer { 
+    text-align: center; 
+    padding: 80px 20px 30px; 
+    color: var(--text-muted); 
+    font-size: 11px; 
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+  }
+  
+  hr { 
+    border: none; 
+    height: 1px; 
+    background: rgba(255, 255, 255, 0.08); 
+    margin: 90px 0; 
+  }
+  
+  .profile-section { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .curator-note {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--gold);
+    margin-top: 25px;
+    letter-spacing: 0.5px;
+  }
 </style>
-
 </head>
-
 <body>
-
 <div class="container">
-
-<div class="small">
-DISCOVER LUXURY
+  
+  <header>
+    <div class="logo">Discover Luxury</div>
+    <div class="sub">Private Travel Office</div>
+  </header>
+  
+  <section class="hero">
+    <h1>The Unseen<br>World</h1>
+    <p>Private journeys. Meaningful partnerships.<br>Curating exceptional travel experiences for discerning travellers.</p>
+    <div class="btns">
+      <a class="btn btn-primary" target="_blank" href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I%27d%20like%20to%20meet%20you%20during%20ILTM%20Asia.">WhatsApp</a>
+      <a class="btn" href="mailto:bhupesh@discoverluxury.in">Email</a>
+    </div>
+  </section>
+  
+  <hr>
+  
+  <section class="profile-section">
+    <h2>Meet Bhupesh Kumar</h2>
+    <p class="gold-text" style="letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-bottom: 35px;">Founder &middot; Discover Luxury</p>
+    <div class="card" style="max-width: 750px;">
+      <p>Discover Luxury is a private travel office specialising in bespoke journeys. I look forward to connecting with destination specialists, exceptional hospitality partners, and forward-thinking travel designers during the event.</p>
+      <div class="curator-note">Curated personally by Bhupesh</div>
+    </div>
+  </section>
+  
+  <hr>
+  
+  <section style="text-align: center;">
+    <h2>Partnership Interests</h2>
+    <div class="grid-wrapper">
+      <div class="grid">
+        <div class="grid-item">Luxury Resorts</div>
+        <div class="grid-item">Boutique Hotels</div>
+        <div class="grid-item">Private Villas</div>
+        <div class="grid-item">Expedition Cruises</div>
+        <div class="grid-item">Safari Experiences</div>
+        <div class="grid-item">Destination Specialists</div>
+        <div class="grid-item">Rail Journeys</div>
+        <div class="grid-item">Bespoke Itineraries</div>
+      </div>
+    </div>
+  </section>
+  
+  <hr>
+  
+  <section style="text-align: center;">
+    <h2>Let's Meet in Singapore</h2>
+    <p style="color: var(--text-muted); margin-top: 15px;">Available throughout ILTM Asia 2026.</p>
+    <div class="btns">
+      <a class="btn btn-primary" target="_blank" href="https://wa.me/919876003384?text=Hello%20Bhupesh,%20I%27d%20like%20to%20schedule%20a%20meeting%20during%20ILTM%20Asia.">Schedule Meeting</a>
+      <a class="btn" href="mailto:bhupesh@discoverluxury.in?subject=ILTM%20Meeting">Email Me</a>
+    </div>
+  </section>
+  
+  <footer>
+    DISCOVER LUXURY &nbsp;&nbsp;|&nbsp;&nbsp; PRIVATE TRAVEL OFFICE<br><br>
+    <a style="color:var(--gold);text-decoration:none;" href="https://discoverluxury.in">discoverluxury.in</a>
+  </footer>
+  
 </div>
-
-<h1>
-The <span class="gold">Unseen</span><br>
-World
-</h1>
-
-<div class="subtitle">
-Private Journeys. Personally Curated.
-</div>
-
-<div class="line"></div>
-
-<p>
-
-Thank you for visiting Discover Luxury.
-
-We design highly personalised luxury journeys across Antarctica, Africa, Europe, Private Islands, Villas, Expeditions and the world's most extraordinary destinations.
-
-Every itinerary is crafted personally—not selected from a brochure.
-
-</p>
-
-<div class="card">
-
-<div class="name">
-Bhupesh Kumar
-</div>
-
-<div class="role">
-Founder • Discover Luxury
-</div>
-
-<a class="button" href="mailto:bhupesh@discoverluxury.in">
-Email Me
-</a>
-
-<a class="button" href="https://wa.me/919876003384">
-WhatsApp
-</a>
-
-<a class="button" href="https://discoverluxury.in">
-Visit Website
-</a>
-
-</div>
-
-<div class="footer">
-
-ILTM Asia 2026<br>
-Singapore
-
-</div>
-
-</div>
-
 </body>
-
 </html>
